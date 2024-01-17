@@ -12,7 +12,7 @@ function App() {
         </p>
       </div>
       <p className="read-the-docs">
-        Click on the Vite and React logos to learn more but the
+        Click on the Vite and React logos to learn more but th
       </p>
     </>
   );
