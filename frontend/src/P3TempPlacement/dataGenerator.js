@@ -74,7 +74,7 @@ function useThisFunctionToMake1FakeProject() {
   print(
     "WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWorkPackage"
   );
-  print(`${JSON.stringify(generatedWPObjects)}`);
+  print(JSON.stringify(generatedWPObjects));
 
   print(
     "***************************************************************************"
@@ -98,10 +98,11 @@ function generateListOfWP(pID, numberOfWPs) {
 //Subfunction to Generate WP of Objects
 function generateWPObjects(pID, genWPList, numberOfBids) {
   print("genWPLIST", genWPList);
-  //Local reference to check how many CWPs to make
+  //Local reference to check how many WPs for each CWPs to make
   let wpCountPerCWP = [numberOfCWP1WPs, numberOfCWP2WPs, numberOfCWP3WPs];
 
   let returnArray = [];
+  //Check which
   for (let wpID of genWPList) {
     let cwpID = 0;
     let cwpAntiDate = new Date(0);
@@ -205,6 +206,7 @@ function generateAssociatedBids(wpObj) {
       installPrice99: randomInteger(installPriceMin, installPriceMax),
       daysForDelivery9: randomInteger(daysForSuppliesMin, daysForSuppliesMax),
       daysForInstall: randomInteger(daysForInstallMin, daysForInstallMax),
+      availableDates9: [],
     });
   }
   return returnArray;
