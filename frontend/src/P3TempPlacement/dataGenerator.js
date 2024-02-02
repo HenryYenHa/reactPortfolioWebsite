@@ -14,25 +14,22 @@ const daysForSuppliesMax = 15;
 const daysForInstallMin = 3;
 const daysForInstallMax = 15;
 const doubleBidChance = 0.1;
-//Estimate accuracy in %; class 5 accuracy is -20 to +50 ==> 80 to 150 
-const estimateAccuracyMin = 0.8
-const estimateAccuracyMax = 1.5
+const availDatesLeewayMin = 3;
+const availDatesLeewayMax = 7;
+//Estimate accuracy in %; class 5 accuracy is -20 to +50 ==> 80 to 150
+const estimateAccuracyMin = 0.8;
+const estimateAccuracyMax = 1.5;
 //Number of WPs in each CWP, will generate CWP1 WPs first until depleted before moving to next
 const numberOfCWP1WPs = 3;
 const numberOfCWP2WPs = 2;
 const numberOfCWP3WPs = 1;
 
 //List of generated Constants for ease of project generation
-const millisecondsPerDay = 86400000;
-const cwp1InstallDays = randomInteger(15, 40);
-const cwp2InstallDays = randomInteger(15, 40);
+const cwp1InstallDays = randomInteger(15, 30);
+const cwp2InstallDays = randomInteger(15, 30);
 const cwp1Day = new Date("Jan 1 2024");
-const cwp2Day = new Date(
-  Date.parse(cwp1Day) + cwp1InstallDays * millisecondsPerDay
-);
-const cwp3Day = new Date(
-  Date.parse(cwp2Day) + cwp2InstallDays * millisecondsPerDay
-);
+const cwp2Day = shiftDateByXDays(cwp1Day, cwp1InstallDays);
+const cwp3Day = shiftDateByXDays(cwp2Day, cwp2InstallDays);
 
 //Generate ID of list of WP
 const generatedWPList = generateListOfWP(projectID, numOfWP);
@@ -58,8 +55,9 @@ function randomInteger(min, max) {
 }
 
 //Utility function to generate a date object with changes in days
-function shiftDateByXDays(givenDate, numberOfDays){
-  return new Date(Date.parse(givenDate) + ((numberOfDays)*millisecondsPerDay))
+function shiftDateByXDays(givenDate, numberOfDays) {
+  const millisecondsPerDay = 86400000;
+  return new Date(Date.parse(givenDate) + numberOfDays * millisecondsPerDay);
 }
 
 //The primary function
@@ -92,6 +90,8 @@ function useThisFunctionToMake1FakeProject() {
   print(
     "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPProject"
   );
+  print(bidReferrenceArray);
+  print("77");
   // print(`Project: ${JSON.stringify(fakeProject)}`);
 }
 
@@ -119,32 +119,31 @@ function generateWPObjects(pID, genWPList, numberOfBids) {
     if (wpCountPerCWP[0] > 0) {
       wpCountPerCWP[0]--;
       cwpID = 1;
-      cwpAntiDate = new Date(
-        //Randomize Date by about install date
-        Date.parse(cwp1Day) +
-          randomInteger(0, daysForInstallMax) * millisecondsPerDay
+      //Randomize Date by about install date
+      cwpAntiDate = shiftDateByXDays(
+        cwp1Day,
+        randomInteger(0, daysForInstallMax)
       );
     } else if (wpCountPerCWP[1] > 0) {
       wpCountPerCWP[1]--;
       cwpID = 2;
-      cwpAntiDate = new Date(
-        Date.parse(cwp2Day) +
-          randomInteger(0, daysForInstallMax) * millisecondsPerDay
+      cwpAntiDate = shiftDateByXDays(
+        cwp2Day,
+        randomInteger(0, daysForInstallMax)
       );
     } else if (wpCountPerCWP[2] > 0) {
       wpCountPerCWP[2]--;
       cwpID = 3;
-      cwpAntiDate = new Date(
-        //Randomize Date by about install date
-        Date.parse(cwp3Day) +
-          randomInteger(0, daysForInstallMax) * millisecondsPerDay
+      cwpAntiDate = shiftDateByXDays(
+        cwp3Day,
+        randomInteger(0, daysForInstallMax)
       );
     } else {
       console.log("ERROR: NOT ENOUGH CWP-WP ASSIGNED");
       if (miniDebug) break;
     }
     let generatedListOfBids = generateListOfBids(wpID, numberOfBids); //Calculate install date as the date afterwards
-    let cwpAntiDate2 = new Date(Date.parse(cwpAntiDate) + millisecondsPerDay);
+    let cwpAntiDate2 = shiftDateByXDays(cwpAntiDate, 1);
 
     //CWP does not exist (yet); it's also basically the Uniformat code
     returnArray.push({
@@ -208,33 +207,66 @@ function generateAssociatedBids(wpObj) {
         if (miniDebug) break;
       }
     }
-    // Calculate dates
-    let dateChecklist = generateBidDateInfo(supplyVal, installVal, wpObj);
+    // Calculate dates and prices
+    let checklist = generateBidDateInfo(supplyVal, installVal, wpObj);
     returnArray.push({
       id: bidID,
       workPackage: wpObj.id,
+      installPrice: randomInteger(installPriceMin, installPriceMax),
+      supplyPrice: randomInteger(supplyPriceMin, supplyPriceMax),
       isEstimate: Math.random() < 0.5 ? true : false,
-      estimateAccuracy: randomInteger(estimateAccuracyMin, estimateAccuracyMax) / 100 + 1,
+      estimateAccuracy:
+        randomInteger(estimateAccuracyMin, estimateAccuracyMax) / 100 + 1,
       submittedBy: uuidv4(),
       isSupply: supplyVal,
       isInstall: installVal,
-      supplyPrice99: randomInteger(supplyPriceMin, supplyPriceMax),
-      installPrice99: randomInteger(installPriceMin, installPriceMax),
-      daysForDelivery9: randomInteger(daysForSuppliesMin, daysForSuppliesMax),
-      daysForInstall: randomInteger(daysForInstallMin, daysForInstallMax),
-      availableDates9: [],
+      supplyPrice99: checklist.supPrice,
+      installPrice99: checklist.instPrice,
+      daysForSupply9: checklist.supDay,
+      daysForInstall: checklist.instDay,
+      availableDates9: [checklist.availDateMin, checklist.availDateMax],
+      availStart99: checklist.availDateMin,
+      availEnd99: checklist.availDateMax,
     });
-  } //TODO IS ON THE AVAILABLE DATE9
+  }
   print(returnArray);
   return returnArray;
 }
 
 //Subsubfunction to generate bid date info to be plugged into bids; returns object with information
-function generateBidDateInfo(supply, install,wpObj) {
+function generateBidDateInfo(supply, install, wpObj) {
   let returnObj = {};
-  if(supply&&install){
-    returnObj.availMinDate = new Date(Date.parse(wpObj.anticipatedDateForDelivery99)
+  if (supply) {
+    const supDays = randomInteger(daysForSuppliesMin, daysForSuppliesMax);
+    returnObj.supPrice = randomInteger(supplyPriceMin, supplyPriceMax);
+    returnObj.supDay = supDays;
+    returnObj.availDateMin = shiftDateByXDays(
+      wpObj.anticipatedDateForDelivery99,
+      -(supDays + randomInteger(availDatesLeewayMin, availDatesLeewayMax))
+    );
+    returnObj.availDateMax = shiftDateByXDays(
+      wpObj.anticipatedDateForDelivery99,
+      randomInteger(availDatesLeewayMin, availDatesLeewayMax)
+    );
   }
+  if (install) {
+    const instDays = randomInteger(daysForInstallMin, daysForInstallMax);
+    returnObj.instPrice = randomInteger(installPriceMin, installPriceMax);
+    returnObj.instDay = instDays;
+    //If it is a double bid, fix the end date
+    returnObj.availDateMax = shiftDateByXDays(
+      wpObj.anticipatedDateToCommenceInstall99,
+      randomInteger(availDatesLeewayMin, availDatesLeewayMax) + instDays
+    );
+    // If it is not a double bid, fix the start date
+    if (!supply) {
+      returnObj.availDateMin = shiftDateByXDays(
+        wpObj.anticipatedDateToCommenceInstall99,
+        -randomInteger(availDatesLeewayMin, availDatesLeewayMax)
+      );
+    }
+  }
+  return returnObj;
 }
 
 useThisFunctionToMake1FakeProject();
