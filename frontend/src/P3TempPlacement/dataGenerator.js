@@ -198,7 +198,7 @@ function generateAssociatedBids(wpObj) {
       id: bidID,
       workPackage: wpObj.id,
       isEstimate: Math.random() < 0.5 ? true : false,
-      estimateAccuracy: (Math.random() + 1).toFixed(4),
+      estimateAccuracy: randomInteger(-20, 50) / 100 + 1,
       submittedBy: uuidv4(),
       isSupply: supplyVal,
       isInstall: installVal,
@@ -206,9 +206,10 @@ function generateAssociatedBids(wpObj) {
       installPrice99: randomInteger(installPriceMin, installPriceMax),
       daysForDelivery9: randomInteger(daysForSuppliesMin, daysForSuppliesMax),
       daysForInstall: randomInteger(daysForInstallMin, daysForInstallMax),
-      availableDates9: [],
+      availableDates9: [(supplyVal == true ? wpObj.a)],
     });
-  }
+  }//TODO IS ON THE AVAILABLE DATE9
+  print(returnArray);
   return returnArray;
 }
 
