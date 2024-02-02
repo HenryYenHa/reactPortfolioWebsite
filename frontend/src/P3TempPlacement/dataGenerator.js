@@ -13,6 +13,10 @@ const daysForSuppliesMin = 3;
 const daysForSuppliesMax = 15;
 const daysForInstallMin = 3;
 const daysForInstallMax = 15;
+const doubleBidChance = 0.1;
+//Estimate accuracy in %; class 5 accuracy is -20 to +50 ==> 80 to 150 
+const estimateAccuracyMin = 0.8
+const estimateAccuracyMax = 1.5
 //Number of WPs in each CWP, will generate CWP1 WPs first until depleted before moving to next
 const numberOfCWP1WPs = 3;
 const numberOfCWP2WPs = 2;
@@ -39,7 +43,7 @@ function print() {
   if (miniDebug) console.log(...arguments);
 }
 
-// Function to generate UUIDv4
+//Utility function to generate UUIDv4
 function uuidv4() {
   return "xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(/[xy]/g, function (c) {
     let r = (Math.random() * 16) | 0,
@@ -48,9 +52,14 @@ function uuidv4() {
   });
 }
 
-// Function to generate a random Integer within a range
+//Utility function to generate a random Integer within a range
 function randomInteger(min, max) {
   return Math.floor(Math.random() * (max - min) + min);
+}
+
+//Utility function to generate a date object with changes in days
+function shiftDateByXDays(givenDate, numberOfDays){
+  return new Date(Date.parse(givenDate) + ((numberOfDays)*millisecondsPerDay))
 }
 
 //The primary function
@@ -169,36 +178,43 @@ function generateAssociatedBids(wpObj) {
   for (let bidID of wpObj.submittedBids) {
     let supplyVal = false;
     let installVal = false;
-    // If they only have 1 submittedBid generate a double bid otherwise make sure it has at least 1 bid of each type; 10% chance to generate a double bid
+    // If they only have 1 submittedBid generate a double bid otherwise make sure it has at least 1 bid of each type
     if (wpObj.submittedBids.length == 1) {
       supplyVal = true;
       installVal = true;
     } else if (hasSupply == false) {
       hasSupply = true;
       supplyVal = true;
-      installVal = Math.random() < 0.1 ? true : false;
+      installVal = Math.random() < doubleBidChance ? true : false;
     } else if (hasInstall == false) {
       hasInstall = true;
       installVal = true;
-      supplyVal = Math.random() < 0.1 ? true : false;
+      supplyVal = Math.random() < doubleBidChance ? true : false;
     } else {
       const randomVal = Math.random();
-      if (randomVal > 0.55) {
+      const x = 0.5 + doubleBidChance / 2;
+      const y = 0.5 - doubleBidChance / 2;
+      if (randomVal < x && randomVal >= y) {
+        supplyVal = true;
+        installVal = true;
+      } else if (randomVal >= x) {
         supplyVal = true;
         installVal = false;
-      } else if (randomVal < 0.45) {
+      } else if (randomVal < y) {
         supplyVal = false;
         installVal = true;
       } else {
-        supplyVal = true;
-        installVal = true;
+        console.log("ERROR: Invalid bid. DoubleBidChance");
+        if (miniDebug) break;
       }
     }
+    // Calculate dates
+    let dateChecklist = generateBidDateInfo(supplyVal, installVal, wpObj);
     returnArray.push({
       id: bidID,
       workPackage: wpObj.id,
       isEstimate: Math.random() < 0.5 ? true : false,
-      estimateAccuracy: randomInteger(-20, 50) / 100 + 1,
+      estimateAccuracy: randomInteger(estimateAccuracyMin, estimateAccuracyMax) / 100 + 1,
       submittedBy: uuidv4(),
       isSupply: supplyVal,
       isInstall: installVal,
@@ -206,11 +222,19 @@ function generateAssociatedBids(wpObj) {
       installPrice99: randomInteger(installPriceMin, installPriceMax),
       daysForDelivery9: randomInteger(daysForSuppliesMin, daysForSuppliesMax),
       daysForInstall: randomInteger(daysForInstallMin, daysForInstallMax),
-      availableDates9: [(supplyVal == true ? wpObj.a)],
+      availableDates9: [],
     });
-  }//TODO IS ON THE AVAILABLE DATE9
+  } //TODO IS ON THE AVAILABLE DATE9
   print(returnArray);
   return returnArray;
+}
+
+//Subsubfunction to generate bid date info to be plugged into bids; returns object with information
+function generateBidDateInfo(supply, install,wpObj) {
+  let returnObj = {};
+  if(supply&&install){
+    returnObj.availMinDate = new Date(Date.parse(wpObj.anticipatedDateForDelivery99)
+  }
 }
 
 useThisFunctionToMake1FakeProject();
