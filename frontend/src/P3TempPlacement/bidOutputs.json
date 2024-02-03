@@ -1,0 +1,1836 @@
+[
+  [
+    {
+      "id": "P01-WP00-B000",
+      "workPackage": "P01-WP00",
+      "installPrice": 47766,
+      "supplyPrice": 71829,
+      "isEstimate": false,
+      "estimateAccuracy": 1,
+      "submittedBy": "82ec1941-9710-4973-991f-da7a36168ab2",
+      "isSupply": true,
+      "isInstall": false,
+      "supplyPrice99": 66900,
+      "daysForSupply9": 3,
+      "availableDates9": [
+        "2023-12-29T07:00:00.000Z",
+        "2024-01-10T07:00:00.000Z"
+      ],
+      "availStart99": "2023-12-29T07:00:00.000Z",
+      "availEnd99": "2024-01-10T07:00:00.000Z",
+      "sumID99": 1
+    },
+    {
+      "id": "P01-WP00-B001",
+      "workPackage": "P01-WP00",
+      "installPrice": 96563,
+      "supplyPrice": 164638,
+      "isEstimate": false,
+      "estimateAccuracy": 1.01,
+      "submittedBy": "8d2c506c-458f-43c7-b4bc-36a308018f4c",
+      "isSupply": false,
+      "isInstall": true,
+      "installPrice99": 222395,
+      "daysForInstall": 13,
+      "availableDates9": [
+        "2024-01-03T07:00:00.000Z",
+        "2024-01-24T07:00:00.000Z"
+      ],
+      "availStart99": "2024-01-03T07:00:00.000Z",
+      "availEnd99": "2024-01-24T07:00:00.000Z",
+      "sumID99": 2
+    },
+    {
+      "id": "P01-WP00-B002",
+      "workPackage": "P01-WP00",
+      "installPrice": 244794,
+      "supplyPrice": 153159,
+      "isEstimate": false,
+      "estimateAccuracy": 1.01,
+      "submittedBy": "9cea9615-e367-4d21-81a6-c9a2aacc1593",
+      "isSupply": false,
+      "isInstall": true,
+      "installPrice99": 157180,
+      "daysForInstall": 8,
+      "availableDates9": [
+        "2024-01-02T07:00:00.000Z",
+        "2024-01-20T07:00:00.000Z"
+      ],
+      "availStart99": "2024-01-02T07:00:00.000Z",
+      "availEnd99": "2024-01-20T07:00:00.000Z",
+      "sumID99": 3
+    },
+    {
+      "id": "P01-WP00-B003",
+      "workPackage": "P01-WP00",
+      "installPrice": 211829,
+      "supplyPrice": 236878,
+      "isEstimate": false,
+      "estimateAccuracy": 1.01,
+      "submittedBy": "a23f6136-59c4-41ce-a95e-d29679cb1503",
+      "isSupply": true,
+      "isInstall": false,
+      "supplyPrice99": 66302,
+      "daysForSupply9": 10,
+      "availableDates9": [
+        "2023-12-23T07:00:00.000Z",
+        "2024-01-12T07:00:00.000Z"
+      ],
+      "availStart99": "2023-12-23T07:00:00.000Z",
+      "availEnd99": "2024-01-12T07:00:00.000Z",
+      "sumID99": 4
+    },
+    {
+      "id": "P01-WP00-B004",
+      "workPackage": "P01-WP00",
+      "installPrice": 44631,
+      "supplyPrice": 34208,
+      "isEstimate": false,
+      "estimateAccuracy": 1.01,
+      "submittedBy": "ef9efe15-218a-440e-914e-4fd5fe233d0d",
+      "isSupply": true,
+      "isInstall": true,
+      "supplyPrice99": 74362,
+      "installPrice99": 115873,
+      "daysForSupply9": 10,
+      "daysForInstall": 14,
+      "availableDates9": [
+        "2023-12-22T07:00:00.000Z",
+        "2024-01-25T07:00:00.000Z"
+      ],
+      "availStart99": "2023-12-22T07:00:00.000Z",
+      "availEnd99": "2024-01-25T07:00:00.000Z",
+      "sumID99": 5
+    },
+    {
+      "id": "P01-WP00-B005",
+      "workPackage": "P01-WP00",
+      "installPrice": 209976,
+      "supplyPrice": 61930,
+      "isEstimate": false,
+      "estimateAccuracy": 1.01,
+      "submittedBy": "4037de39-85c0-4d3e-9eb9-925db06ac949",
+      "isSupply": true,
+      "isInstall": false,
+      "supplyPrice99": 224776,
+      "daysForSupply9": 4,
+      "availableDates9": [
+        "2023-12-30T07:00:00.000Z",
+        "2024-01-09T07:00:00.000Z"
+      ],
+      "availStart99": "2023-12-30T07:00:00.000Z",
+      "availEnd99": "2024-01-09T07:00:00.000Z",
+      "sumID99": 6
+    },
+    {
+      "id": "P01-WP00-B006",
+      "workPackage": "P01-WP00",
+      "installPrice": 52361,
+      "supplyPrice": 216092,
+      "isEstimate": false,
+      "estimateAccuracy": 1,
+      "submittedBy": "ced6438f-d93d-4c12-a8d1-44cec25a869d",
+      "isSupply": false,
+      "isInstall": true,
+      "installPrice99": 136227,
+      "daysForInstall": 3,
+      "availableDates9": [
+        "2024-01-01T07:00:00.000Z",
+        "2024-01-16T07:00:00.000Z"
+      ],
+      "availStart99": "2024-01-01T07:00:00.000Z",
+      "availEnd99": "2024-01-16T07:00:00.000Z",
+      "sumID99": 7
+    },
+    {
+      "id": "P01-WP00-B007",
+      "workPackage": "P01-WP00",
+      "installPrice": 71139,
+      "supplyPrice": 162260,
+      "isEstimate": true,
+      "estimateAccuracy": 1.01,
+      "submittedBy": "f325931c-ed21-4fff-903e-4b76e13dff7a",
+      "isSupply": true,
+      "isInstall": false,
+      "supplyPrice99": 240323,
+      "daysForSupply9": 11,
+      "availableDates9": [
+        "2023-12-22T07:00:00.000Z",
+        "2024-01-12T07:00:00.000Z"
+      ],
+      "availStart99": "2023-12-22T07:00:00.000Z",
+      "availEnd99": "2024-01-12T07:00:00.000Z",
+      "sumID99": 8
+    },
+    {
+      "id": "P01-WP00-B008",
+      "workPackage": "P01-WP00",
+      "installPrice": 148972,
+      "supplyPrice": 243084,
+      "isEstimate": false,
+      "estimateAccuracy": 1.01,
+      "submittedBy": "293c99cd-cba5-4810-8003-9c7ea9a28517",
+      "isSupply": true,
+      "isInstall": false,
+      "supplyPrice99": 38694,
+      "daysForSupply9": 6,
+      "availableDates9": [
+        "2023-12-27T07:00:00.000Z",
+        "2024-01-12T07:00:00.000Z"
+      ],
+      "availStart99": "2023-12-27T07:00:00.000Z",
+      "availEnd99": "2024-01-12T07:00:00.000Z",
+      "sumID99": 9
+    },
+    {
+      "id": "P01-WP00-B009",
+      "workPackage": "P01-WP00",
+      "installPrice": 100880,
+      "supplyPrice": 115550,
+      "isEstimate": true,
+      "estimateAccuracy": 1.01,
+      "submittedBy": "2d902df9-3c54-4c09-98c5-1a86600a7071",
+      "isSupply": false,
+      "isInstall": true,
+      "installPrice99": 91990,
+      "daysForInstall": 3,
+      "availableDates9": [
+        "2024-01-02T07:00:00.000Z",
+        "2024-01-14T07:00:00.000Z"
+      ],
+      "availStart99": "2024-01-02T07:00:00.000Z",
+      "availEnd99": "2024-01-14T07:00:00.000Z",
+      "sumID99": 10
+    },
+    {
+      "id": "P01-WP00-B010",
+      "workPackage": "P01-WP00",
+      "installPrice": 235033,
+      "supplyPrice": 196829,
+      "isEstimate": false,
+      "estimateAccuracy": 1.01,
+      "submittedBy": "1dfe54c5-578d-4193-9dc0-5a38e103ffb8",
+      "isSupply": true,
+      "isInstall": false,
+      "supplyPrice99": 192559,
+      "daysForSupply9": 4,
+      "availableDates9": [
+        "2023-12-29T07:00:00.000Z",
+        "2024-01-11T07:00:00.000Z"
+      ],
+      "availStart99": "2023-12-29T07:00:00.000Z",
+      "availEnd99": "2024-01-11T07:00:00.000Z",
+      "sumID99": 11
+    },
+    {
+      "id": "P01-WP00-B011",
+      "workPackage": "P01-WP00",
+      "installPrice": 157804,
+      "supplyPrice": 224410,
+      "isEstimate": true,
+      "estimateAccuracy": 1.01,
+      "submittedBy": "0edaa849-d574-4953-8861-d027f266fb50",
+      "isSupply": false,
+      "isInstall": true,
+      "installPrice99": 113014,
+      "daysForInstall": 9,
+      "availableDates9": [
+        "2024-01-02T07:00:00.000Z",
+        "2024-01-21T07:00:00.000Z"
+      ],
+      "availStart99": "2024-01-02T07:00:00.000Z",
+      "availEnd99": "2024-01-21T07:00:00.000Z",
+      "sumID99": 12
+    },
+    {
+      "id": "P01-WP00-B012",
+      "workPackage": "P01-WP00",
+      "installPrice": 111972,
+      "supplyPrice": 31162,
+      "isEstimate": true,
+      "estimateAccuracy": 1,
+      "submittedBy": "d5f317a8-4b68-465c-befe-5e72f1592c43",
+      "isSupply": true,
+      "isInstall": true,
+      "supplyPrice99": 130377,
+      "installPrice99": 214784,
+      "daysForSupply9": 11,
+      "daysForInstall": 5,
+      "availableDates9": [
+        "2023-12-23T07:00:00.000Z",
+        "2024-01-17T07:00:00.000Z"
+      ],
+      "availStart99": "2023-12-23T07:00:00.000Z",
+      "availEnd99": "2024-01-17T07:00:00.000Z",
+      "sumID99": 13
+    },
+    {
+      "id": "P01-WP00-B013",
+      "workPackage": "P01-WP00",
+      "installPrice": 91974,
+      "supplyPrice": 240538,
+      "isEstimate": true,
+      "estimateAccuracy": 1.01,
+      "submittedBy": "10c15c50-fed5-4057-8b47-267338cd64e3",
+      "isSupply": true,
+      "isInstall": false,
+      "supplyPrice99": 110284,
+      "daysForSupply9": 14,
+      "availableDates9": [
+        "2023-12-18T07:00:00.000Z",
+        "2024-01-12T07:00:00.000Z"
+      ],
+      "availStart99": "2023-12-18T07:00:00.000Z",
+      "availEnd99": "2024-01-12T07:00:00.000Z",
+      "sumID99": 14
+    },
+    {
+      "id": "P01-WP00-B014",
+      "workPackage": "P01-WP00",
+      "installPrice": 211410,
+      "supplyPrice": 130500,
+      "isEstimate": false,
+      "estimateAccuracy": 1.01,
+      "submittedBy": "cfe36a0b-d569-42d4-ae57-87a02dedfc1f",
+      "isSupply": false,
+      "isInstall": true,
+      "installPrice99": 166107,
+      "daysForInstall": 10,
+      "availableDates9": [
+        "2024-01-02T07:00:00.000Z",
+        "2024-01-23T07:00:00.000Z"
+      ],
+      "availStart99": "2024-01-02T07:00:00.000Z",
+      "availEnd99": "2024-01-23T07:00:00.000Z",
+      "sumID99": 15
+    }
+  ],
+  [
+    {
+      "id": "P01-WP01-B000",
+      "workPackage": "P01-WP01",
+      "installPrice": 48063,
+      "supplyPrice": 140875,
+      "isEstimate": false,
+      "estimateAccuracy": 1.01,
+      "submittedBy": "745fe902-4d8e-4122-990d-25c467423507",
+      "isSupply": true,
+      "isInstall": false,
+      "supplyPrice99": 127564,
+      "daysForSupply9": 13,
+      "availableDates9": [
+        "2023-12-19T07:00:00.000Z",
+        "2024-01-11T07:00:00.000Z"
+      ],
+      "availStart99": "2023-12-19T07:00:00.000Z",
+      "availEnd99": "2024-01-11T07:00:00.000Z",
+      "sumID99": 16
+    },
+    {
+      "id": "P01-WP01-B001",
+      "workPackage": "P01-WP01",
+      "installPrice": 234442,
+      "supplyPrice": 245353,
+      "isEstimate": true,
+      "estimateAccuracy": 1.01,
+      "submittedBy": "0216f5ab-6159-4d57-8d8c-bf98f8bc1b05",
+      "isSupply": false,
+      "isInstall": true,
+      "installPrice99": 136567,
+      "daysForInstall": 5,
+      "availableDates9": [
+        "2024-01-02T07:00:00.000Z",
+        "2024-01-17T07:00:00.000Z"
+      ],
+      "availStart99": "2024-01-02T07:00:00.000Z",
+      "availEnd99": "2024-01-17T07:00:00.000Z",
+      "sumID99": 17
+    },
+    {
+      "id": "P01-WP01-B002",
+      "workPackage": "P01-WP01",
+      "installPrice": 235446,
+      "supplyPrice": 73930,
+      "isEstimate": true,
+      "estimateAccuracy": 1,
+      "submittedBy": "baa2ebff-f69b-48d4-a403-736b28107dbe",
+      "isSupply": true,
+      "isInstall": true,
+      "supplyPrice99": 26544,
+      "installPrice99": 97555,
+      "daysForSupply9": 13,
+      "daysForInstall": 8,
+      "availableDates9": [
+        "2023-12-20T07:00:00.000Z",
+        "2024-01-21T07:00:00.000Z"
+      ],
+      "availStart99": "2023-12-20T07:00:00.000Z",
+      "availEnd99": "2024-01-21T07:00:00.000Z",
+      "sumID99": 18
+    },
+    {
+      "id": "P01-WP01-B003",
+      "workPackage": "P01-WP01",
+      "installPrice": 92544,
+      "supplyPrice": 143434,
+      "isEstimate": false,
+      "estimateAccuracy": 1.01,
+      "submittedBy": "85f223ac-e07b-42b6-89db-30177dccf150",
+      "isSupply": true,
+      "isInstall": false,
+      "supplyPrice99": 17255,
+      "daysForSupply9": 9,
+      "availableDates9": [
+        "2023-12-24T07:00:00.000Z",
+        "2024-01-13T07:00:00.000Z"
+      ],
+      "availStart99": "2023-12-24T07:00:00.000Z",
+      "availEnd99": "2024-01-13T07:00:00.000Z",
+      "sumID99": 19
+    },
+    {
+      "id": "P01-WP01-B004",
+      "workPackage": "P01-WP01",
+      "installPrice": 107829,
+      "supplyPrice": 70826,
+      "isEstimate": false,
+      "estimateAccuracy": 1,
+      "submittedBy": "9a0bd57e-ee34-4c35-89ad-1d350d9b7cda",
+      "isSupply": false,
+      "isInstall": true,
+      "installPrice99": 24645,
+      "daysForInstall": 6,
+      "availableDates9": [
+        "2024-01-04T07:00:00.000Z",
+        "2024-01-20T07:00:00.000Z"
+      ],
+      "availStart99": "2024-01-04T07:00:00.000Z",
+      "availEnd99": "2024-01-20T07:00:00.000Z",
+      "sumID99": 20
+    },
+    {
+      "id": "P01-WP01-B005",
+      "workPackage": "P01-WP01",
+      "installPrice": 127101,
+      "supplyPrice": 64629,
+      "isEstimate": true,
+      "estimateAccuracy": 1.01,
+      "submittedBy": "3a2f2c59-7e42-46ed-aac0-d444ffff7252",
+      "isSupply": false,
+      "isInstall": true,
+      "installPrice99": 26486,
+      "daysForInstall": 8,
+      "availableDates9": [
+        "2024-01-05T07:00:00.000Z",
+        "2024-01-20T07:00:00.000Z"
+      ],
+      "availStart99": "2024-01-05T07:00:00.000Z",
+      "availEnd99": "2024-01-20T07:00:00.000Z",
+      "sumID99": 21
+    },
+    {
+      "id": "P01-WP01-B006",
+      "workPackage": "P01-WP01",
+      "installPrice": 232515,
+      "supplyPrice": 25775,
+      "isEstimate": false,
+      "estimateAccuracy": 1,
+      "submittedBy": "3bb6a94a-48b4-4fc2-b306-a72edbed3b32",
+      "isSupply": true,
+      "isInstall": false,
+      "supplyPrice99": 42619,
+      "daysForSupply9": 11,
+      "availableDates9": [
+        "2023-12-24T07:00:00.000Z",
+        "2024-01-12T07:00:00.000Z"
+      ],
+      "availStart99": "2023-12-24T07:00:00.000Z",
+      "availEnd99": "2024-01-12T07:00:00.000Z",
+      "sumID99": 22
+    },
+    {
+      "id": "P01-WP01-B007",
+      "workPackage": "P01-WP01",
+      "installPrice": 38861,
+      "supplyPrice": 109512,
+      "isEstimate": true,
+      "estimateAccuracy": 1.01,
+      "submittedBy": "45b8596f-8605-46aa-bee4-d30d56514369",
+      "isSupply": true,
+      "isInstall": false,
+      "supplyPrice99": 94600,
+      "daysForSupply9": 5,
+      "availableDates9": [
+        "2023-12-29T07:00:00.000Z",
+        "2024-01-11T07:00:00.000Z"
+      ],
+      "availStart99": "2023-12-29T07:00:00.000Z",
+      "availEnd99": "2024-01-11T07:00:00.000Z",
+      "sumID99": 23
+    },
+    {
+      "id": "P01-WP01-B008",
+      "workPackage": "P01-WP01",
+      "installPrice": 16370,
+      "supplyPrice": 172294,
+      "isEstimate": true,
+      "estimateAccuracy": 1.01,
+      "submittedBy": "4671bf96-7ff9-4f34-b342-cf2fa2e97383",
+      "isSupply": false,
+      "isInstall": true,
+      "installPrice99": 82162,
+      "daysForInstall": 8,
+      "availableDates9": [
+        "2024-01-02T07:00:00.000Z",
+        "2024-01-20T07:00:00.000Z"
+      ],
+      "availStart99": "2024-01-02T07:00:00.000Z",
+      "availEnd99": "2024-01-20T07:00:00.000Z",
+      "sumID99": 24
+    },
+    {
+      "id": "P01-WP01-B009",
+      "workPackage": "P01-WP01",
+      "installPrice": 78140,
+      "supplyPrice": 51581,
+      "isEstimate": false,
+      "estimateAccuracy": 1.01,
+      "submittedBy": "4363d58e-83f6-4a90-9677-f33719160bb0",
+      "isSupply": true,
+      "isInstall": false,
+      "supplyPrice99": 198148,
+      "daysForSupply9": 11,
+      "availableDates9": [
+        "2023-12-21T07:00:00.000Z",
+        "2024-01-10T07:00:00.000Z"
+      ],
+      "availStart99": "2023-12-21T07:00:00.000Z",
+      "availEnd99": "2024-01-10T07:00:00.000Z",
+      "sumID99": 25
+    },
+    {
+      "id": "P01-WP01-B010",
+      "workPackage": "P01-WP01",
+      "installPrice": 225568,
+      "supplyPrice": 178894,
+      "isEstimate": false,
+      "estimateAccuracy": 1.01,
+      "submittedBy": "6a053ab8-93f2-48b3-8df4-1ddbb81cfe65",
+      "isSupply": true,
+      "isInstall": false,
+      "supplyPrice99": 105521,
+      "daysForSupply9": 12,
+      "availableDates9": [
+        "2023-12-20T07:00:00.000Z",
+        "2024-01-13T07:00:00.000Z"
+      ],
+      "availStart99": "2023-12-20T07:00:00.000Z",
+      "availEnd99": "2024-01-13T07:00:00.000Z",
+      "sumID99": 26
+    },
+    {
+      "id": "P01-WP01-B011",
+      "workPackage": "P01-WP01",
+      "installPrice": 93453,
+      "supplyPrice": 17258,
+      "isEstimate": false,
+      "estimateAccuracy": 1.01,
+      "submittedBy": "a61f8681-ba5c-40ac-8b34-4da2416e4e1d",
+      "isSupply": false,
+      "isInstall": true,
+      "installPrice99": 85106,
+      "daysForInstall": 6,
+      "availableDates9": [
+        "2024-01-02T07:00:00.000Z",
+        "2024-01-17T07:00:00.000Z"
+      ],
+      "availStart99": "2024-01-02T07:00:00.000Z",
+      "availEnd99": "2024-01-17T07:00:00.000Z",
+      "sumID99": 27
+    },
+    {
+      "id": "P01-WP01-B012",
+      "workPackage": "P01-WP01",
+      "installPrice": 57956,
+      "supplyPrice": 212579,
+      "isEstimate": true,
+      "estimateAccuracy": 1,
+      "submittedBy": "a19507e8-55a7-4d74-a74f-1dcfbb031a6e",
+      "isSupply": false,
+      "isInstall": true,
+      "installPrice99": 145106,
+      "daysForInstall": 5,
+      "availableDates9": [
+        "2024-01-05T07:00:00.000Z",
+        "2024-01-19T07:00:00.000Z"
+      ],
+      "availStart99": "2024-01-05T07:00:00.000Z",
+      "availEnd99": "2024-01-19T07:00:00.000Z",
+      "sumID99": 28
+    },
+    {
+      "id": "P01-WP01-B013",
+      "workPackage": "P01-WP01",
+      "installPrice": 179764,
+      "supplyPrice": 228871,
+      "isEstimate": false,
+      "estimateAccuracy": 1.01,
+      "submittedBy": "b7b91894-3feb-4a2b-a28a-d0f0c6451d29",
+      "isSupply": false,
+      "isInstall": true,
+      "installPrice99": 204961,
+      "daysForInstall": 6,
+      "availableDates9": [
+        "2024-01-03T07:00:00.000Z",
+        "2024-01-20T07:00:00.000Z"
+      ],
+      "availStart99": "2024-01-03T07:00:00.000Z",
+      "availEnd99": "2024-01-20T07:00:00.000Z",
+      "sumID99": 29
+    },
+    {
+      "id": "P01-WP01-B014",
+      "workPackage": "P01-WP01",
+      "installPrice": 122721,
+      "supplyPrice": 212598,
+      "isEstimate": false,
+      "estimateAccuracy": 1,
+      "submittedBy": "64cfd535-0089-4e6c-b3ae-d66c072c8561",
+      "isSupply": false,
+      "isInstall": true,
+      "installPrice99": 48808,
+      "daysForInstall": 3,
+      "availableDates9": [
+        "2024-01-02T07:00:00.000Z",
+        "2024-01-14T07:00:00.000Z"
+      ],
+      "availStart99": "2024-01-02T07:00:00.000Z",
+      "availEnd99": "2024-01-14T07:00:00.000Z",
+      "sumID99": 30
+    }
+  ],
+  [
+    {
+      "id": "P01-WP02-B000",
+      "workPackage": "P01-WP02",
+      "installPrice": 21086,
+      "supplyPrice": 228612,
+      "isEstimate": true,
+      "estimateAccuracy": 1.01,
+      "submittedBy": "5110cd32-5c53-48e0-8b89-5f5c721160f9",
+      "isSupply": true,
+      "isInstall": false,
+      "supplyPrice99": 55178,
+      "daysForSupply9": 4,
+      "availableDates9": [
+        "2023-12-25T07:00:00.000Z",
+        "2024-01-06T07:00:00.000Z"
+      ],
+      "availStart99": "2023-12-25T07:00:00.000Z",
+      "availEnd99": "2024-01-06T07:00:00.000Z",
+      "sumID99": 31
+    },
+    {
+      "id": "P01-WP02-B001",
+      "workPackage": "P01-WP02",
+      "installPrice": 52594,
+      "supplyPrice": 80046,
+      "isEstimate": true,
+      "estimateAccuracy": 1,
+      "submittedBy": "50286b1a-1d4c-4378-ad3b-b7d7d5349b87",
+      "isSupply": false,
+      "isInstall": true,
+      "installPrice99": 81836,
+      "daysForInstall": 9,
+      "availableDates9": [
+        "2023-12-29T07:00:00.000Z",
+        "2024-01-16T07:00:00.000Z"
+      ],
+      "availStart99": "2023-12-29T07:00:00.000Z",
+      "availEnd99": "2024-01-16T07:00:00.000Z",
+      "sumID99": 32
+    },
+    {
+      "id": "P01-WP02-B002",
+      "workPackage": "P01-WP02",
+      "installPrice": 155082,
+      "supplyPrice": 95542,
+      "isEstimate": false,
+      "estimateAccuracy": 1.01,
+      "submittedBy": "9b60085b-803a-42c8-98cd-9dbc311c1089",
+      "isSupply": false,
+      "isInstall": true,
+      "installPrice99": 222909,
+      "daysForInstall": 14,
+      "availableDates9": [
+        "2023-12-30T07:00:00.000Z",
+        "2024-01-22T07:00:00.000Z"
+      ],
+      "availStart99": "2023-12-30T07:00:00.000Z",
+      "availEnd99": "2024-01-22T07:00:00.000Z",
+      "sumID99": 33
+    },
+    {
+      "id": "P01-WP02-B003",
+      "workPackage": "P01-WP02",
+      "installPrice": 146393,
+      "supplyPrice": 202135,
+      "isEstimate": false,
+      "estimateAccuracy": 1.01,
+      "submittedBy": "f8e80501-fc4e-4e7b-8c4b-e747dd266646",
+      "isSupply": false,
+      "isInstall": true,
+      "installPrice99": 174395,
+      "daysForInstall": 10,
+      "availableDates9": [
+        "2023-12-31T07:00:00.000Z",
+        "2024-01-16T07:00:00.000Z"
+      ],
+      "availStart99": "2023-12-31T07:00:00.000Z",
+      "availEnd99": "2024-01-16T07:00:00.000Z",
+      "sumID99": 34
+    },
+    {
+      "id": "P01-WP02-B004",
+      "workPackage": "P01-WP02",
+      "installPrice": 174832,
+      "supplyPrice": 162817,
+      "isEstimate": true,
+      "estimateAccuracy": 1.01,
+      "submittedBy": "c6576e2c-396b-4c2a-a73d-b20533dd23fc",
+      "isSupply": true,
+      "isInstall": true,
+      "supplyPrice99": 35882,
+      "installPrice99": 240760,
+      "daysForSupply9": 5,
+      "daysForInstall": 8,
+      "availableDates9": [
+        "2023-12-23T07:00:00.000Z",
+        "2024-01-15T07:00:00.000Z"
+      ],
+      "availStart99": "2023-12-23T07:00:00.000Z",
+      "availEnd99": "2024-01-15T07:00:00.000Z",
+      "sumID99": 35
+    },
+    {
+      "id": "P01-WP02-B005",
+      "workPackage": "P01-WP02",
+      "installPrice": 166759,
+      "supplyPrice": 149050,
+      "isEstimate": false,
+      "estimateAccuracy": 1.01,
+      "submittedBy": "845eb029-9846-433d-94ac-252e79b32457",
+      "isSupply": false,
+      "isInstall": true,
+      "installPrice99": 218468,
+      "daysForInstall": 9,
+      "availableDates9": [
+        "2023-12-31T07:00:00.000Z",
+        "2024-01-16T07:00:00.000Z"
+      ],
+      "availStart99": "2023-12-31T07:00:00.000Z",
+      "availEnd99": "2024-01-16T07:00:00.000Z",
+      "sumID99": 36
+    },
+    {
+      "id": "P01-WP02-B006",
+      "workPackage": "P01-WP02",
+      "installPrice": 125647,
+      "supplyPrice": 167813,
+      "isEstimate": false,
+      "estimateAccuracy": 1.01,
+      "submittedBy": "039797ad-e129-414b-ac57-918edbe6a4cf",
+      "isSupply": false,
+      "isInstall": true,
+      "installPrice99": 78367,
+      "daysForInstall": 7,
+      "availableDates9": [
+        "2023-12-30T07:00:00.000Z",
+        "2024-01-13T07:00:00.000Z"
+      ],
+      "availStart99": "2023-12-30T07:00:00.000Z",
+      "availEnd99": "2024-01-13T07:00:00.000Z",
+      "sumID99": 37
+    },
+    {
+      "id": "P01-WP02-B007",
+      "workPackage": "P01-WP02",
+      "installPrice": 42185,
+      "supplyPrice": 166412,
+      "isEstimate": true,
+      "estimateAccuracy": 1,
+      "submittedBy": "d5d11a1d-eae6-486c-ab1e-08d3736fe955",
+      "isSupply": true,
+      "isInstall": true,
+      "supplyPrice99": 243639,
+      "installPrice99": 66747,
+      "daysForSupply9": 11,
+      "daysForInstall": 13,
+      "availableDates9": [
+        "2023-12-16T07:00:00.000Z",
+        "2024-01-21T07:00:00.000Z"
+      ],
+      "availStart99": "2023-12-16T07:00:00.000Z",
+      "availEnd99": "2024-01-21T07:00:00.000Z",
+      "sumID99": 38
+    },
+    {
+      "id": "P01-WP02-B008",
+      "workPackage": "P01-WP02",
+      "installPrice": 73478,
+      "supplyPrice": 224642,
+      "isEstimate": true,
+      "estimateAccuracy": 1.01,
+      "submittedBy": "54a3e086-0657-4b72-8bab-d2a3b72741a1",
+      "isSupply": true,
+      "isInstall": false,
+      "supplyPrice99": 45435,
+      "daysForSupply9": 10,
+      "availableDates9": [
+        "2023-12-17T07:00:00.000Z",
+        "2024-01-08T07:00:00.000Z"
+      ],
+      "availStart99": "2023-12-17T07:00:00.000Z",
+      "availEnd99": "2024-01-08T07:00:00.000Z",
+      "sumID99": 39
+    },
+    {
+      "id": "P01-WP02-B009",
+      "workPackage": "P01-WP02",
+      "installPrice": 183837,
+      "supplyPrice": 204883,
+      "isEstimate": true,
+      "estimateAccuracy": 1.01,
+      "submittedBy": "fa8405a1-08ff-4d36-ad82-30a61e68b347",
+      "isSupply": true,
+      "isInstall": true,
+      "supplyPrice99": 124161,
+      "installPrice99": 213228,
+      "daysForSupply9": 9,
+      "daysForInstall": 9,
+      "availableDates9": [
+        "2023-12-20T07:00:00.000Z",
+        "2024-01-18T07:00:00.000Z"
+      ],
+      "availStart99": "2023-12-20T07:00:00.000Z",
+      "availEnd99": "2024-01-18T07:00:00.000Z",
+      "sumID99": 40
+    },
+    {
+      "id": "P01-WP02-B010",
+      "workPackage": "P01-WP02",
+      "installPrice": 40453,
+      "supplyPrice": 102092,
+      "isEstimate": true,
+      "estimateAccuracy": 1,
+      "submittedBy": "882bd2ab-a96a-4e6b-b3be-2c6906402d2b",
+      "isSupply": true,
+      "isInstall": false,
+      "supplyPrice99": 30065,
+      "daysForSupply9": 3,
+      "availableDates9": [
+        "2023-12-24T07:00:00.000Z",
+        "2024-01-07T07:00:00.000Z"
+      ],
+      "availStart99": "2023-12-24T07:00:00.000Z",
+      "availEnd99": "2024-01-07T07:00:00.000Z",
+      "sumID99": 41
+    },
+    {
+      "id": "P01-WP02-B011",
+      "workPackage": "P01-WP02",
+      "installPrice": 58571,
+      "supplyPrice": 245790,
+      "isEstimate": false,
+      "estimateAccuracy": 1.01,
+      "submittedBy": "6f9dc138-8e53-486c-9b77-90646d2775b9",
+      "isSupply": false,
+      "isInstall": true,
+      "installPrice99": 240931,
+      "daysForInstall": 7,
+      "availableDates9": [
+        "2023-12-29T07:00:00.000Z",
+        "2024-01-15T07:00:00.000Z"
+      ],
+      "availStart99": "2023-12-29T07:00:00.000Z",
+      "availEnd99": "2024-01-15T07:00:00.000Z",
+      "sumID99": 42
+    },
+    {
+      "id": "P01-WP02-B012",
+      "workPackage": "P01-WP02",
+      "installPrice": 130212,
+      "supplyPrice": 61998,
+      "isEstimate": true,
+      "estimateAccuracy": 1,
+      "submittedBy": "5a93821a-3cc1-4552-8399-70f3fdbaf7f9",
+      "isSupply": true,
+      "isInstall": false,
+      "supplyPrice99": 159071,
+      "daysForSupply9": 9,
+      "availableDates9": [
+        "2023-12-19T07:00:00.000Z",
+        "2024-01-07T07:00:00.000Z"
+      ],
+      "availStart99": "2023-12-19T07:00:00.000Z",
+      "availEnd99": "2024-01-07T07:00:00.000Z",
+      "sumID99": 43
+    },
+    {
+      "id": "P01-WP02-B013",
+      "workPackage": "P01-WP02",
+      "installPrice": 212440,
+      "supplyPrice": 16693,
+      "isEstimate": false,
+      "estimateAccuracy": 1,
+      "submittedBy": "b3526e07-c982-43e9-a4d9-210451846c2a",
+      "isSupply": true,
+      "isInstall": false,
+      "supplyPrice99": 183582,
+      "daysForSupply9": 4,
+      "availableDates9": [
+        "2023-12-24T07:00:00.000Z",
+        "2024-01-06T07:00:00.000Z"
+      ],
+      "availStart99": "2023-12-24T07:00:00.000Z",
+      "availEnd99": "2024-01-06T07:00:00.000Z",
+      "sumID99": 44
+    },
+    {
+      "id": "P01-WP02-B014",
+      "workPackage": "P01-WP02",
+      "installPrice": 188065,
+      "supplyPrice": 242096,
+      "isEstimate": false,
+      "estimateAccuracy": 1,
+      "submittedBy": "1e677281-6527-41e2-9639-83bff28fb54c",
+      "isSupply": true,
+      "isInstall": false,
+      "supplyPrice99": 81941,
+      "daysForSupply9": 5,
+      "availableDates9": [
+        "2023-12-25T07:00:00.000Z",
+        "2024-01-06T07:00:00.000Z"
+      ],
+      "availStart99": "2023-12-25T07:00:00.000Z",
+      "availEnd99": "2024-01-06T07:00:00.000Z",
+      "sumID99": 45
+    }
+  ],
+  [
+    {
+      "id": "P01-WP03-B000",
+      "workPackage": "P01-WP03",
+      "installPrice": 184347,
+      "supplyPrice": 81470,
+      "isEstimate": true,
+      "estimateAccuracy": 1,
+      "submittedBy": "cd4c32d3-ff30-4132-aa3c-2beaf5a0950a",
+      "isSupply": true,
+      "isInstall": false,
+      "supplyPrice99": 170720,
+      "daysForSupply9": 5,
+      "availableDates9": [
+        "2024-01-17T07:00:00.000Z",
+        "2024-01-31T07:00:00.000Z"
+      ],
+      "availStart99": "2024-01-17T07:00:00.000Z",
+      "availEnd99": "2024-01-31T07:00:00.000Z",
+      "sumID99": 46
+    },
+    {
+      "id": "P01-WP03-B001",
+      "workPackage": "P01-WP03",
+      "installPrice": 181930,
+      "supplyPrice": 246998,
+      "isEstimate": true,
+      "estimateAccuracy": 1.01,
+      "submittedBy": "9bc3c057-f8ec-41e9-80e3-a2635d982d6b",
+      "isSupply": false,
+      "isInstall": true,
+      "installPrice99": 70571,
+      "daysForInstall": 6,
+      "availableDates9": [
+        "2024-01-23T07:00:00.000Z",
+        "2024-02-06T07:00:00.000Z"
+      ],
+      "availStart99": "2024-01-23T07:00:00.000Z",
+      "availEnd99": "2024-02-06T07:00:00.000Z",
+      "sumID99": 47
+    },
+    {
+      "id": "P01-WP03-B002",
+      "workPackage": "P01-WP03",
+      "installPrice": 101516,
+      "supplyPrice": 88540,
+      "isEstimate": true,
+      "estimateAccuracy": 1.01,
+      "submittedBy": "399d47e7-fed8-4d44-947b-77b6921a84d4",
+      "isSupply": false,
+      "isInstall": true,
+      "installPrice99": 164813,
+      "daysForInstall": 6,
+      "availableDates9": [
+        "2024-01-25T07:00:00.000Z",
+        "2024-02-09T07:00:00.000Z"
+      ],
+      "availStart99": "2024-01-25T07:00:00.000Z",
+      "availEnd99": "2024-02-09T07:00:00.000Z",
+      "sumID99": 48
+    },
+    {
+      "id": "P01-WP03-B003",
+      "workPackage": "P01-WP03",
+      "installPrice": 126611,
+      "supplyPrice": 100865,
+      "isEstimate": false,
+      "estimateAccuracy": 1.01,
+      "submittedBy": "3f7b2a15-5846-47a3-8607-5eb428c3db38",
+      "isSupply": true,
+      "isInstall": false,
+      "supplyPrice99": 184232,
+      "daysForSupply9": 10,
+      "availableDates9": [
+        "2024-01-14T07:00:00.000Z",
+        "2024-02-01T07:00:00.000Z"
+      ],
+      "availStart99": "2024-01-14T07:00:00.000Z",
+      "availEnd99": "2024-02-01T07:00:00.000Z",
+      "sumID99": 49
+    },
+    {
+      "id": "P01-WP03-B004",
+      "workPackage": "P01-WP03",
+      "installPrice": 151746,
+      "supplyPrice": 212539,
+      "isEstimate": false,
+      "estimateAccuracy": 1.01,
+      "submittedBy": "f6252b44-9c72-4a6b-a009-d1107d56044e",
+      "isSupply": false,
+      "isInstall": true,
+      "installPrice99": 171209,
+      "daysForInstall": 12,
+      "availableDates9": [
+        "2024-01-24T07:00:00.000Z",
+        "2024-02-14T07:00:00.000Z"
+      ],
+      "availStart99": "2024-01-24T07:00:00.000Z",
+      "availEnd99": "2024-02-14T07:00:00.000Z",
+      "sumID99": 50
+    },
+    {
+      "id": "P01-WP03-B005",
+      "workPackage": "P01-WP03",
+      "installPrice": 179608,
+      "supplyPrice": 213227,
+      "isEstimate": false,
+      "estimateAccuracy": 1.01,
+      "submittedBy": "532d8fb5-04ef-418a-a150-7432c279cc95",
+      "isSupply": false,
+      "isInstall": true,
+      "installPrice99": 69007,
+      "daysForInstall": 14,
+      "availableDates9": [
+        "2024-01-23T07:00:00.000Z",
+        "2024-02-16T07:00:00.000Z"
+      ],
+      "availStart99": "2024-01-23T07:00:00.000Z",
+      "availEnd99": "2024-02-16T07:00:00.000Z",
+      "sumID99": 51
+    },
+    {
+      "id": "P01-WP03-B006",
+      "workPackage": "P01-WP03",
+      "installPrice": 209517,
+      "supplyPrice": 146226,
+      "isEstimate": false,
+      "estimateAccuracy": 1.01,
+      "submittedBy": "ee883003-e440-4c9a-ab84-81560eb77f48",
+      "isSupply": true,
+      "isInstall": false,
+      "supplyPrice99": 246730,
+      "daysForSupply9": 10,
+      "availableDates9": [
+        "2024-01-14T07:00:00.000Z",
+        "2024-01-30T07:00:00.000Z"
+      ],
+      "availStart99": "2024-01-14T07:00:00.000Z",
+      "availEnd99": "2024-01-30T07:00:00.000Z",
+      "sumID99": 52
+    },
+    {
+      "id": "P01-WP03-B007",
+      "workPackage": "P01-WP03",
+      "installPrice": 141040,
+      "supplyPrice": 248998,
+      "isEstimate": true,
+      "estimateAccuracy": 1.01,
+      "submittedBy": "7f4f0fc7-ebd0-4473-8953-4da4266a6bcb",
+      "isSupply": true,
+      "isInstall": false,
+      "supplyPrice99": 231832,
+      "daysForSupply9": 10,
+      "availableDates9": [
+        "2024-01-11T07:00:00.000Z",
+        "2024-01-30T07:00:00.000Z"
+      ],
+      "availStart99": "2024-01-11T07:00:00.000Z",
+      "availEnd99": "2024-01-30T07:00:00.000Z",
+      "sumID99": 53
+    },
+    {
+      "id": "P01-WP03-B008",
+      "workPackage": "P01-WP03",
+      "installPrice": 170613,
+      "supplyPrice": 221577,
+      "isEstimate": true,
+      "estimateAccuracy": 1,
+      "submittedBy": "00e8d534-8967-419d-8b8c-cc141e70d057",
+      "isSupply": false,
+      "isInstall": true,
+      "installPrice99": 16060,
+      "daysForInstall": 3,
+      "availableDates9": [
+        "2024-01-23T07:00:00.000Z",
+        "2024-02-03T07:00:00.000Z"
+      ],
+      "availStart99": "2024-01-23T07:00:00.000Z",
+      "availEnd99": "2024-02-03T07:00:00.000Z",
+      "sumID99": 54
+    },
+    {
+      "id": "P01-WP03-B009",
+      "workPackage": "P01-WP03",
+      "installPrice": 166411,
+      "supplyPrice": 191293,
+      "isEstimate": true,
+      "estimateAccuracy": 1,
+      "submittedBy": "48a3759d-e908-4522-9199-0e704801dabc",
+      "isSupply": false,
+      "isInstall": true,
+      "installPrice99": 82978,
+      "daysForInstall": 4,
+      "availableDates9": [
+        "2024-01-24T07:00:00.000Z",
+        "2024-02-05T07:00:00.000Z"
+      ],
+      "availStart99": "2024-01-24T07:00:00.000Z",
+      "availEnd99": "2024-02-05T07:00:00.000Z",
+      "sumID99": 55
+    },
+    {
+      "id": "P01-WP03-B010",
+      "workPackage": "P01-WP03",
+      "installPrice": 176109,
+      "supplyPrice": 156548,
+      "isEstimate": false,
+      "estimateAccuracy": 1.01,
+      "submittedBy": "1b131207-64a0-4c70-9438-2ce416555fc4",
+      "isSupply": true,
+      "isInstall": false,
+      "supplyPrice99": 113186,
+      "daysForSupply9": 3,
+      "availableDates9": [
+        "2024-01-20T07:00:00.000Z",
+        "2024-01-31T07:00:00.000Z"
+      ],
+      "availStart99": "2024-01-20T07:00:00.000Z",
+      "availEnd99": "2024-01-31T07:00:00.000Z",
+      "sumID99": 56
+    },
+    {
+      "id": "P01-WP03-B011",
+      "workPackage": "P01-WP03",
+      "installPrice": 112910,
+      "supplyPrice": 43612,
+      "isEstimate": true,
+      "estimateAccuracy": 1.01,
+      "submittedBy": "e8a9b7d3-bdde-4a06-a90b-4fd6631e2dda",
+      "isSupply": false,
+      "isInstall": true,
+      "installPrice99": 59440,
+      "daysForInstall": 6,
+      "availableDates9": [
+        "2024-01-24T07:00:00.000Z",
+        "2024-02-07T07:00:00.000Z"
+      ],
+      "availStart99": "2024-01-24T07:00:00.000Z",
+      "availEnd99": "2024-02-07T07:00:00.000Z",
+      "sumID99": 57
+    },
+    {
+      "id": "P01-WP03-B012",
+      "workPackage": "P01-WP03",
+      "installPrice": 227385,
+      "supplyPrice": 81475,
+      "isEstimate": false,
+      "estimateAccuracy": 1.01,
+      "submittedBy": "cd9846bd-9033-4709-aa2c-0972a0dc0ddb",
+      "isSupply": true,
+      "isInstall": false,
+      "supplyPrice99": 26992,
+      "daysForSupply9": 4,
+      "availableDates9": [
+        "2024-01-19T07:00:00.000Z",
+        "2024-02-01T07:00:00.000Z"
+      ],
+      "availStart99": "2024-01-19T07:00:00.000Z",
+      "availEnd99": "2024-02-01T07:00:00.000Z",
+      "sumID99": 58
+    },
+    {
+      "id": "P01-WP03-B013",
+      "workPackage": "P01-WP03",
+      "installPrice": 106313,
+      "supplyPrice": 166454,
+      "isEstimate": false,
+      "estimateAccuracy": 1.01,
+      "submittedBy": "ce2ec4c4-debd-4291-8b46-ce1bfb71893b",
+      "isSupply": false,
+      "isInstall": true,
+      "installPrice99": 161993,
+      "daysForInstall": 11,
+      "availableDates9": [
+        "2024-01-22T07:00:00.000Z",
+        "2024-02-12T07:00:00.000Z"
+      ],
+      "availStart99": "2024-01-22T07:00:00.000Z",
+      "availEnd99": "2024-02-12T07:00:00.000Z",
+      "sumID99": 59
+    },
+    {
+      "id": "P01-WP03-B014",
+      "workPackage": "P01-WP03",
+      "installPrice": 159795,
+      "supplyPrice": 118478,
+      "isEstimate": true,
+      "estimateAccuracy": 1.01,
+      "submittedBy": "96fdf0a7-4225-4106-9c76-acba2275d60d",
+      "isSupply": true,
+      "isInstall": false,
+      "supplyPrice99": 23311,
+      "daysForSupply9": 6,
+      "availableDates9": [
+        "2024-01-18T07:00:00.000Z",
+        "2024-02-02T07:00:00.000Z"
+      ],
+      "availStart99": "2024-01-18T07:00:00.000Z",
+      "availEnd99": "2024-02-02T07:00:00.000Z",
+      "sumID99": 60
+    }
+  ],
+  [
+    {
+      "id": "P01-WP04-B000",
+      "workPackage": "P01-WP04",
+      "installPrice": 25454,
+      "supplyPrice": 204843,
+      "isEstimate": true,
+      "estimateAccuracy": 1.01,
+      "submittedBy": "47883207-8e1f-4533-b368-67781286e770",
+      "isSupply": true,
+      "isInstall": false,
+      "supplyPrice99": 227389,
+      "daysForSupply9": 12,
+      "availableDates9": [
+        "2024-01-06T07:00:00.000Z",
+        "2024-01-26T07:00:00.000Z"
+      ],
+      "availStart99": "2024-01-06T07:00:00.000Z",
+      "availEnd99": "2024-01-26T07:00:00.000Z",
+      "sumID99": 61
+    },
+    {
+      "id": "P01-WP04-B001",
+      "workPackage": "P01-WP04",
+      "installPrice": 74450,
+      "supplyPrice": 74509,
+      "isEstimate": false,
+      "estimateAccuracy": 1.01,
+      "submittedBy": "0c5c290d-4b0e-48f0-a77a-d7678a4b6286",
+      "isSupply": false,
+      "isInstall": true,
+      "installPrice99": 41939,
+      "daysForInstall": 13,
+      "availableDates9": [
+        "2024-01-18T07:00:00.000Z",
+        "2024-02-12T07:00:00.000Z"
+      ],
+      "availStart99": "2024-01-18T07:00:00.000Z",
+      "availEnd99": "2024-02-12T07:00:00.000Z",
+      "sumID99": 62
+    },
+    {
+      "id": "P01-WP04-B002",
+      "workPackage": "P01-WP04",
+      "installPrice": 117144,
+      "supplyPrice": 222775,
+      "isEstimate": false,
+      "estimateAccuracy": 1.01,
+      "submittedBy": "9da5d4e1-eefb-46c1-9f98-a606808c9827",
+      "isSupply": true,
+      "isInstall": true,
+      "supplyPrice99": 169609,
+      "installPrice99": 140508,
+      "daysForSupply9": 5,
+      "daysForInstall": 5,
+      "availableDates9": [
+        "2024-01-13T07:00:00.000Z",
+        "2024-02-01T07:00:00.000Z"
+      ],
+      "availStart99": "2024-01-13T07:00:00.000Z",
+      "availEnd99": "2024-02-01T07:00:00.000Z",
+      "sumID99": 63
+    },
+    {
+      "id": "P01-WP04-B003",
+      "workPackage": "P01-WP04",
+      "installPrice": 145582,
+      "supplyPrice": 115226,
+      "isEstimate": true,
+      "estimateAccuracy": 1.01,
+      "submittedBy": "0eb0fd67-6607-4891-8fa1-c2eb603daf8f",
+      "isSupply": false,
+      "isInstall": true,
+      "installPrice99": 165748,
+      "daysForInstall": 10,
+      "availableDates9": [
+        "2024-01-20T07:00:00.000Z",
+        "2024-02-08T07:00:00.000Z"
+      ],
+      "availStart99": "2024-01-20T07:00:00.000Z",
+      "availEnd99": "2024-02-08T07:00:00.000Z",
+      "sumID99": 64
+    },
+    {
+      "id": "P01-WP04-B004",
+      "workPackage": "P01-WP04",
+      "installPrice": 236865,
+      "supplyPrice": 155341,
+      "isEstimate": true,
+      "estimateAccuracy": 1,
+      "submittedBy": "b9d5806a-b49a-46aa-9b6a-b1a0c6de6110",
+      "isSupply": false,
+      "isInstall": true,
+      "installPrice99": 219819,
+      "daysForInstall": 13,
+      "availableDates9": [
+        "2024-01-19T07:00:00.000Z",
+        "2024-02-09T07:00:00.000Z"
+      ],
+      "availStart99": "2024-01-19T07:00:00.000Z",
+      "availEnd99": "2024-02-09T07:00:00.000Z",
+      "sumID99": 65
+    },
+    {
+      "id": "P01-WP04-B005",
+      "workPackage": "P01-WP04",
+      "installPrice": 195305,
+      "supplyPrice": 212983,
+      "isEstimate": true,
+      "estimateAccuracy": 1.01,
+      "submittedBy": "4ae14c1f-63f8-49c8-8551-553198257cdf",
+      "isSupply": false,
+      "isInstall": true,
+      "installPrice99": 44489,
+      "daysForInstall": 13,
+      "availableDates9": [
+        "2024-01-19T07:00:00.000Z",
+        "2024-02-09T07:00:00.000Z"
+      ],
+      "availStart99": "2024-01-19T07:00:00.000Z",
+      "availEnd99": "2024-02-09T07:00:00.000Z",
+      "sumID99": 66
+    },
+    {
+      "id": "P01-WP04-B006",
+      "workPackage": "P01-WP04",
+      "installPrice": 25531,
+      "supplyPrice": 132412,
+      "isEstimate": true,
+      "estimateAccuracy": 1.01,
+      "submittedBy": "bf8b2ad9-d054-4783-8521-73b4ec9df665",
+      "isSupply": false,
+      "isInstall": true,
+      "installPrice99": 70698,
+      "daysForInstall": 8,
+      "availableDates9": [
+        "2024-01-18T07:00:00.000Z",
+        "2024-02-06T07:00:00.000Z"
+      ],
+      "availStart99": "2024-01-18T07:00:00.000Z",
+      "availEnd99": "2024-02-06T07:00:00.000Z",
+      "sumID99": 67
+    },
+    {
+      "id": "P01-WP04-B007",
+      "workPackage": "P01-WP04",
+      "installPrice": 146154,
+      "supplyPrice": 68350,
+      "isEstimate": false,
+      "estimateAccuracy": 1.01,
+      "submittedBy": "e71daae0-dd78-4a8d-a5af-5bd42feec7fc",
+      "isSupply": false,
+      "isInstall": true,
+      "installPrice99": 181162,
+      "daysForInstall": 12,
+      "availableDates9": [
+        "2024-01-19T07:00:00.000Z",
+        "2024-02-08T07:00:00.000Z"
+      ],
+      "availStart99": "2024-01-19T07:00:00.000Z",
+      "availEnd99": "2024-02-08T07:00:00.000Z",
+      "sumID99": 68
+    },
+    {
+      "id": "P01-WP04-B008",
+      "workPackage": "P01-WP04",
+      "installPrice": 206818,
+      "supplyPrice": 231145,
+      "isEstimate": false,
+      "estimateAccuracy": 1.01,
+      "submittedBy": "df93fed4-d766-4c59-9aad-42bce4b6c59b",
+      "isSupply": true,
+      "isInstall": false,
+      "supplyPrice99": 176579,
+      "daysForSupply9": 9,
+      "availableDates9": [
+        "2024-01-09T07:00:00.000Z",
+        "2024-01-28T07:00:00.000Z"
+      ],
+      "availStart99": "2024-01-09T07:00:00.000Z",
+      "availEnd99": "2024-01-28T07:00:00.000Z",
+      "sumID99": 69
+    },
+    {
+      "id": "P01-WP04-B009",
+      "workPackage": "P01-WP04",
+      "installPrice": 59595,
+      "supplyPrice": 70550,
+      "isEstimate": false,
+      "estimateAccuracy": 1,
+      "submittedBy": "1fb36b66-01ca-4205-b4ed-bb95d15e1afd",
+      "isSupply": true,
+      "isInstall": true,
+      "supplyPrice99": 243279,
+      "installPrice99": 242665,
+      "daysForSupply9": 7,
+      "daysForInstall": 14,
+      "availableDates9": [
+        "2024-01-10T07:00:00.000Z",
+        "2024-02-13T07:00:00.000Z"
+      ],
+      "availStart99": "2024-01-10T07:00:00.000Z",
+      "availEnd99": "2024-02-13T07:00:00.000Z",
+      "sumID99": 70
+    },
+    {
+      "id": "P01-WP04-B010",
+      "workPackage": "P01-WP04",
+      "installPrice": 165071,
+      "supplyPrice": 103101,
+      "isEstimate": true,
+      "estimateAccuracy": 1.01,
+      "submittedBy": "80b437c9-db3a-4456-ba21-ec053f595ee5",
+      "isSupply": false,
+      "isInstall": true,
+      "installPrice99": 25761,
+      "daysForInstall": 13,
+      "availableDates9": [
+        "2024-01-18T07:00:00.000Z",
+        "2024-02-09T07:00:00.000Z"
+      ],
+      "availStart99": "2024-01-18T07:00:00.000Z",
+      "availEnd99": "2024-02-09T07:00:00.000Z",
+      "sumID99": 71
+    },
+    {
+      "id": "P01-WP04-B011",
+      "workPackage": "P01-WP04",
+      "installPrice": 245426,
+      "supplyPrice": 21485,
+      "isEstimate": true,
+      "estimateAccuracy": 1.01,
+      "submittedBy": "5d7bca5d-3530-40e8-a8ff-83cbfe5d1efd",
+      "isSupply": true,
+      "isInstall": true,
+      "supplyPrice99": 212209,
+      "installPrice99": 169187,
+      "daysForSupply9": 5,
+      "daysForInstall": 11,
+      "availableDates9": [
+        "2024-01-15T07:00:00.000Z",
+        "2024-02-08T07:00:00.000Z"
+      ],
+      "availStart99": "2024-01-15T07:00:00.000Z",
+      "availEnd99": "2024-02-08T07:00:00.000Z",
+      "sumID99": 72
+    },
+    {
+      "id": "P01-WP04-B012",
+      "workPackage": "P01-WP04",
+      "installPrice": 54870,
+      "supplyPrice": 25819,
+      "isEstimate": true,
+      "estimateAccuracy": 1,
+      "submittedBy": "e12624a6-834a-4709-a8dc-0ffd6d361cea",
+      "isSupply": false,
+      "isInstall": true,
+      "installPrice99": 96933,
+      "daysForInstall": 6,
+      "availableDates9": [
+        "2024-01-20T07:00:00.000Z",
+        "2024-02-04T07:00:00.000Z"
+      ],
+      "availStart99": "2024-01-20T07:00:00.000Z",
+      "availEnd99": "2024-02-04T07:00:00.000Z",
+      "sumID99": 73
+    },
+    {
+      "id": "P01-WP04-B013",
+      "workPackage": "P01-WP04",
+      "installPrice": 23287,
+      "supplyPrice": 200549,
+      "isEstimate": true,
+      "estimateAccuracy": 1,
+      "submittedBy": "03ca4a2d-08ce-40d6-9c7f-bb7529ed9094",
+      "isSupply": false,
+      "isInstall": true,
+      "installPrice99": 241479,
+      "daysForInstall": 12,
+      "availableDates9": [
+        "2024-01-20T07:00:00.000Z",
+        "2024-02-11T07:00:00.000Z"
+      ],
+      "availStart99": "2024-01-20T07:00:00.000Z",
+      "availEnd99": "2024-02-11T07:00:00.000Z",
+      "sumID99": 74
+    },
+    {
+      "id": "P01-WP04-B014",
+      "workPackage": "P01-WP04",
+      "installPrice": 119628,
+      "supplyPrice": 244173,
+      "isEstimate": true,
+      "estimateAccuracy": 1.01,
+      "submittedBy": "89727d16-36e1-42d8-900d-f5de3c243a4a",
+      "isSupply": true,
+      "isInstall": false,
+      "supplyPrice99": 38502,
+      "daysForSupply9": 14,
+      "availableDates9": [
+        "2024-01-03T07:00:00.000Z",
+        "2024-01-29T07:00:00.000Z"
+      ],
+      "availStart99": "2024-01-03T07:00:00.000Z",
+      "availEnd99": "2024-01-29T07:00:00.000Z",
+      "sumID99": 75
+    }
+  ],
+  [
+    {
+      "id": "P01-WP05-B000",
+      "workPackage": "P01-WP05",
+      "installPrice": 25886,
+      "supplyPrice": 51335,
+      "isEstimate": false,
+      "estimateAccuracy": 1.01,
+      "submittedBy": "39512657-1f7e-469c-bfe4-8ec809f4f7a4",
+      "isSupply": true,
+      "isInstall": true,
+      "supplyPrice99": 232677,
+      "installPrice99": 199144,
+      "daysForSupply9": 8,
+      "daysForInstall": 13,
+      "availableDates9": [
+        "2024-02-07T07:00:00.000Z",
+        "2024-03-08T07:00:00.000Z"
+      ],
+      "availStart99": "2024-02-07T07:00:00.000Z",
+      "availEnd99": "2024-03-08T07:00:00.000Z",
+      "sumID99": 76
+    },
+    {
+      "id": "P01-WP05-B001",
+      "workPackage": "P01-WP05",
+      "installPrice": 96007,
+      "supplyPrice": 74126,
+      "isEstimate": false,
+      "estimateAccuracy": 1,
+      "submittedBy": "d7285746-a51e-44ee-960e-eea1654e135f",
+      "isSupply": false,
+      "isInstall": true,
+      "installPrice99": 167990,
+      "daysForInstall": 12,
+      "availableDates9": [
+        "2024-02-18T07:00:00.000Z",
+        "2024-03-07T07:00:00.000Z"
+      ],
+      "availStart99": "2024-02-18T07:00:00.000Z",
+      "availEnd99": "2024-03-07T07:00:00.000Z",
+      "sumID99": 77
+    },
+    {
+      "id": "P01-WP05-B002",
+      "workPackage": "P01-WP05",
+      "installPrice": 157950,
+      "supplyPrice": 116141,
+      "isEstimate": true,
+      "estimateAccuracy": 1.01,
+      "submittedBy": "a9be0436-d26d-46c2-b0a4-5e425fd424c6",
+      "isSupply": true,
+      "isInstall": false,
+      "supplyPrice99": 179970,
+      "daysForSupply9": 10,
+      "availableDates9": [
+        "2024-02-04T07:00:00.000Z",
+        "2024-02-23T07:00:00.000Z"
+      ],
+      "availStart99": "2024-02-04T07:00:00.000Z",
+      "availEnd99": "2024-02-23T07:00:00.000Z",
+      "sumID99": 78
+    },
+    {
+      "id": "P01-WP05-B003",
+      "workPackage": "P01-WP05",
+      "installPrice": 62605,
+      "supplyPrice": 113630,
+      "isEstimate": true,
+      "estimateAccuracy": 1.01,
+      "submittedBy": "53ff27cf-04bc-4f46-8402-e39afcc8199a",
+      "isSupply": false,
+      "isInstall": true,
+      "installPrice99": 142234,
+      "daysForInstall": 8,
+      "availableDates9": [
+        "2024-02-15T07:00:00.000Z",
+        "2024-03-04T07:00:00.000Z"
+      ],
+      "availStart99": "2024-02-15T07:00:00.000Z",
+      "availEnd99": "2024-03-04T07:00:00.000Z",
+      "sumID99": 79
+    },
+    {
+      "id": "P01-WP05-B004",
+      "workPackage": "P01-WP05",
+      "installPrice": 90692,
+      "supplyPrice": 125002,
+      "isEstimate": false,
+      "estimateAccuracy": 1.01,
+      "submittedBy": "a4e3c174-54f6-4cc8-9dbb-c400f2f7955e",
+      "isSupply": true,
+      "isInstall": false,
+      "supplyPrice99": 60330,
+      "daysForSupply9": 10,
+      "availableDates9": [
+        "2024-02-06T07:00:00.000Z",
+        "2024-02-25T07:00:00.000Z"
+      ],
+      "availStart99": "2024-02-06T07:00:00.000Z",
+      "availEnd99": "2024-02-25T07:00:00.000Z",
+      "sumID99": 80
+    },
+    {
+      "id": "P01-WP05-B005",
+      "workPackage": "P01-WP05",
+      "installPrice": 249178,
+      "supplyPrice": 105173,
+      "isEstimate": true,
+      "estimateAccuracy": 1,
+      "submittedBy": "36b1813a-5967-4531-b3d6-569693b47077",
+      "isSupply": false,
+      "isInstall": true,
+      "installPrice99": 221610,
+      "daysForInstall": 9,
+      "availableDates9": [
+        "2024-02-18T07:00:00.000Z",
+        "2024-03-07T07:00:00.000Z"
+      ],
+      "availStart99": "2024-02-18T07:00:00.000Z",
+      "availEnd99": "2024-03-07T07:00:00.000Z",
+      "sumID99": 81
+    },
+    {
+      "id": "P01-WP05-B006",
+      "workPackage": "P01-WP05",
+      "installPrice": 61062,
+      "supplyPrice": 81897,
+      "isEstimate": false,
+      "estimateAccuracy": 1.01,
+      "submittedBy": "84563f2a-7e5b-4b43-a5d0-2e2b1c7017bd",
+      "isSupply": true,
+      "isInstall": false,
+      "supplyPrice99": 68562,
+      "daysForSupply9": 7,
+      "availableDates9": [
+        "2024-02-08T07:00:00.000Z",
+        "2024-02-26T07:00:00.000Z"
+      ],
+      "availStart99": "2024-02-08T07:00:00.000Z",
+      "availEnd99": "2024-02-26T07:00:00.000Z",
+      "sumID99": 82
+    },
+    {
+      "id": "P01-WP05-B007",
+      "workPackage": "P01-WP05",
+      "installPrice": 135874,
+      "supplyPrice": 64666,
+      "isEstimate": true,
+      "estimateAccuracy": 1.01,
+      "submittedBy": "2768f8bf-b433-4437-b7b0-50e66aa7ed2e",
+      "isSupply": true,
+      "isInstall": false,
+      "supplyPrice99": 115395,
+      "daysForSupply9": 11,
+      "availableDates9": [
+        "2024-02-05T07:00:00.000Z",
+        "2024-02-25T07:00:00.000Z"
+      ],
+      "availStart99": "2024-02-05T07:00:00.000Z",
+      "availEnd99": "2024-02-25T07:00:00.000Z",
+      "sumID99": 83
+    },
+    {
+      "id": "P01-WP05-B008",
+      "workPackage": "P01-WP05",
+      "installPrice": 79336,
+      "supplyPrice": 98631,
+      "isEstimate": true,
+      "estimateAccuracy": 1.01,
+      "submittedBy": "2ac50794-a164-48f6-a818-91cc46ad78c1",
+      "isSupply": true,
+      "isInstall": false,
+      "supplyPrice99": 125789,
+      "daysForSupply9": 3,
+      "availableDates9": [
+        "2024-02-13T07:00:00.000Z",
+        "2024-02-25T07:00:00.000Z"
+      ],
+      "availStart99": "2024-02-13T07:00:00.000Z",
+      "availEnd99": "2024-02-25T07:00:00.000Z",
+      "sumID99": 84
+    },
+    {
+      "id": "P01-WP05-B009",
+      "workPackage": "P01-WP05",
+      "installPrice": 178294,
+      "supplyPrice": 95005,
+      "isEstimate": true,
+      "estimateAccuracy": 1.01,
+      "submittedBy": "8582ed51-2aa9-4039-ab3d-374e175ff4ca",
+      "isSupply": false,
+      "isInstall": true,
+      "installPrice99": 228133,
+      "daysForInstall": 10,
+      "availableDates9": [
+        "2024-02-16T07:00:00.000Z",
+        "2024-03-07T07:00:00.000Z"
+      ],
+      "availStart99": "2024-02-16T07:00:00.000Z",
+      "availEnd99": "2024-03-07T07:00:00.000Z",
+      "sumID99": 85
+    },
+    {
+      "id": "P01-WP05-B010",
+      "workPackage": "P01-WP05",
+      "installPrice": 80738,
+      "supplyPrice": 26332,
+      "isEstimate": true,
+      "estimateAccuracy": 1,
+      "submittedBy": "68cf1640-ea17-43da-a9d9-bb7c9cc5d4ff",
+      "isSupply": false,
+      "isInstall": true,
+      "installPrice99": 35817,
+      "daysForInstall": 5,
+      "availableDates9": [
+        "2024-02-15T07:00:00.000Z",
+        "2024-02-29T07:00:00.000Z"
+      ],
+      "availStart99": "2024-02-15T07:00:00.000Z",
+      "availEnd99": "2024-02-29T07:00:00.000Z",
+      "sumID99": 86
+    },
+    {
+      "id": "P01-WP05-B011",
+      "workPackage": "P01-WP05",
+      "installPrice": 190130,
+      "supplyPrice": 178071,
+      "isEstimate": false,
+      "estimateAccuracy": 1.01,
+      "submittedBy": "07f31435-0429-41fc-b22c-888c065b25ed",
+      "isSupply": true,
+      "isInstall": false,
+      "supplyPrice99": 47984,
+      "daysForSupply9": 5,
+      "availableDates9": [
+        "2024-02-12T07:00:00.000Z",
+        "2024-02-24T07:00:00.000Z"
+      ],
+      "availStart99": "2024-02-12T07:00:00.000Z",
+      "availEnd99": "2024-02-24T07:00:00.000Z",
+      "sumID99": 87
+    },
+    {
+      "id": "P01-WP05-B012",
+      "workPackage": "P01-WP05",
+      "installPrice": 183975,
+      "supplyPrice": 64037,
+      "isEstimate": false,
+      "estimateAccuracy": 1.01,
+      "submittedBy": "b0da76d2-2aa1-4091-8910-0d77d377c62e",
+      "isSupply": true,
+      "isInstall": true,
+      "supplyPrice99": 244713,
+      "installPrice99": 242385,
+      "daysForSupply9": 4,
+      "daysForInstall": 6,
+      "availableDates9": [
+        "2024-02-13T07:00:00.000Z",
+        "2024-03-03T07:00:00.000Z"
+      ],
+      "availStart99": "2024-02-13T07:00:00.000Z",
+      "availEnd99": "2024-03-03T07:00:00.000Z",
+      "sumID99": 88
+    },
+    {
+      "id": "P01-WP05-B013",
+      "workPackage": "P01-WP05",
+      "installPrice": 178381,
+      "supplyPrice": 138116,
+      "isEstimate": false,
+      "estimateAccuracy": 1,
+      "submittedBy": "3ff92858-103c-4ea7-899d-1aa669dd5ee4",
+      "isSupply": false,
+      "isInstall": true,
+      "installPrice99": 93804,
+      "daysForInstall": 9,
+      "availableDates9": [
+        "2024-02-16T07:00:00.000Z",
+        "2024-03-07T07:00:00.000Z"
+      ],
+      "availStart99": "2024-02-16T07:00:00.000Z",
+      "availEnd99": "2024-03-07T07:00:00.000Z",
+      "sumID99": 89
+    },
+    {
+      "id": "P01-WP05-B014",
+      "workPackage": "P01-WP05",
+      "installPrice": 192468,
+      "supplyPrice": 223629,
+      "isEstimate": true,
+      "estimateAccuracy": 1.01,
+      "submittedBy": "b82ff67d-15e4-4133-ac45-4c61bf834012",
+      "isSupply": false,
+      "isInstall": true,
+      "installPrice99": 209117,
+      "daysForInstall": 11,
+      "availableDates9": [
+        "2024-02-18T07:00:00.000Z",
+        "2024-03-08T07:00:00.000Z"
+      ],
+      "availStart99": "2024-02-18T07:00:00.000Z",
+      "availEnd99": "2024-03-08T07:00:00.000Z",
+      "sumID99": 90
+    }
+  ]
+]

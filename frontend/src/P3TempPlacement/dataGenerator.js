@@ -1,3 +1,4 @@
+import fs from "fs";
 const miniDebug = true;
 //Manipulate these variables
 const projectID = `P01`;
@@ -34,6 +35,9 @@ const cwp3Day = shiftDateByXDays(cwp2Day, cwp2InstallDays);
 //Generate ID of list of WP
 const generatedWPList = generateListOfWP(projectID, numOfWP);
 let bidReferrenceArray = [];
+let wpReferrenceArray = [];
+let bidIDRefferenceArray = [];
+let refID = 0;
 
 //Mini Debug
 function print() {
@@ -62,10 +66,33 @@ function shiftDateByXDays(givenDate, numberOfDays) {
 
 //The primary function
 function useThisFunctionToMake1FakeProject() {
-  //Note: Projects are not suppose to have an array of WP, but we are putting one in anyways
+  //Note: Projects data have nothing corresponding to the real deal in the database, it is only a list of the options used to generate the fake data
   const fakeProject = {
     id: projectID,
     listofWP: generatedWPList,
+    zz01numOfWP: numOfWP,
+    zz02numOfBidsPerWP: numOfBidsPerWP,
+    zz03supplyPriceMin: supplyPriceMin,
+    zz04supplyPrinceMax: supplyPriceMax,
+    zz05installPriceMin: installPriceMin,
+    zz06installPriceMax: installPriceMax,
+    zz07daysForSuppliesMin: daysForSuppliesMin,
+    zz08daysForSuppliesMax: daysForSuppliesMax,
+    zz09daysForInstallMin: daysForInstallMin,
+    zz10daysForInstallMax: daysForInstallMax,
+    zz11doubleBidChance: doubleBidChance,
+    zz12availDatesLeewayMin: availDatesLeewayMin,
+    zz13availDatesLeewayMax: availDatesLeewayMax,
+    zz14estimateAccuracyMin: estimateAccuracyMin,
+    zz15estimateAccuracyMax: estimateAccuracyMax,
+    zz16numberOfCWP1WPs: numberOfCWP1WPs,
+    zz17numberOfCWP2WPs: numberOfCWP2WPs,
+    zz18numberOfCWP3WPs: numberOfCWP3WPs,
+    zz19cwp1InstallDays: cwp1InstallDays,
+    zz20cwp2InstallDays: cwp2InstallDays,
+    zz21cwp1Day: cwp1Day,
+    zz22cwp2Day: cwp2Day,
+    zz23cwp3Day: cwp3Day,
   };
   //Create list of WP objects
   const generatedWPObjects = generateWPObjects(
@@ -76,30 +103,51 @@ function useThisFunctionToMake1FakeProject() {
   //Manipulate bidReferenceArray to hold Bids
   for (let wpObj of generatedWPObjects) {
     bidReferrenceArray.push(generateAssociatedBids(wpObj));
+    bidIDRefferenceArray.push(wpObj.submittedBids);
   }
 
-  print(
-    "WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWorkPackage"
-  );
-  print(JSON.stringify(generatedWPObjects));
+  const outputData = JSON.stringify(bidReferrenceArray, null, 2);
+  const filename = "bidOutputs.json";
+  fs.writeFile(filename, outputData, "utf8", (err) => {
+    if (err) {
+      console.error("Error writing JSON to file:", err);
+    } else {
+      console.log(`Bid data has been written to ${filename}`);
+    }
+  });
 
-  print(
-    "***************************************************************************"
-  );
-  print();
-  print(
-    "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPProject"
-  );
-  print(bidReferrenceArray);
-  print("77");
+  print(`BidIDList: ${JSON.stringify(bidIDRefferenceArray)}`);
   // print(`Project: ${JSON.stringify(fakeProject)}`);
+
+  const outputData2 = JSON.stringify(bidReferrenceArray, null, 2);
+  const filename2 = "workpackageOutput.json";
+  fs.writeFile(filename2, outputData2, "utf8", (err) => {
+    if (err) {
+      console.error("Error writing JSON to file:", err);
+    } else {
+      console.log(`Workpackage data has been written to ${filename2}`);
+    }
+  });
+
+  let outputData3 = JSON.stringify(fakeProject, null, 2);
+  outputData3 = ",".concat(outputData3);
+  const filename3 = "loggedFakeProjects.json";
+  fs.appendFile(filename3, outputData3, "utf8", (err) => {
+    if (err) {
+      console.error("Error writing JSON to file:", err);
+    } else {
+      console.log(`Project data has been written to ${filename3}`);
+    }
+  });
 }
 
 //Subfunction to generate List of WP
 function generateListOfWP(pID, numberOfWPs) {
   let returnArray = [];
   for (let i = 0; i < numberOfWPs; i++) {
-    returnArray.push(`${pID}-WP${i}`);
+    let printI = String(i);
+    printI = printI.padStart(2, "0");
+    returnArray.push(`${pID}-WP${printI}`);
   }
   return returnArray;
 }
@@ -111,7 +159,7 @@ function generateWPObjects(pID, genWPList, numberOfBids) {
   let wpCountPerCWP = [numberOfCWP1WPs, numberOfCWP2WPs, numberOfCWP3WPs];
 
   let returnArray = [];
-  //Check which
+  //Check which CWP the WP belongs to
   for (let wpID of genWPList) {
     let cwpID = 0;
     let cwpAntiDate = new Date(0);
@@ -162,7 +210,9 @@ function generateWPObjects(pID, genWPList, numberOfBids) {
 function generateListOfBids(wpID, numOfBids) {
   let returnArray = [];
   for (let i = 0; i < numOfBids; i++) {
-    returnArray.push(`${wpID}-B${i}`);
+    let printI = String(i);
+    printI = printI.padStart(3, "0");
+    returnArray.push(`${wpID}-B${printI}`);
   }
   return returnArray;
 }
@@ -175,6 +225,7 @@ function generateAssociatedBids(wpObj) {
   let hasInstall = false;
 
   for (let bidID of wpObj.submittedBids) {
+    refID++; //99
     let supplyVal = false;
     let installVal = false;
     // If they only have 1 submittedBid generate a double bid otherwise make sure it has at least 1 bid of each type
@@ -227,9 +278,9 @@ function generateAssociatedBids(wpObj) {
       availableDates9: [checklist.availDateMin, checklist.availDateMax],
       availStart99: checklist.availDateMin,
       availEnd99: checklist.availDateMax,
+      sumID99: refID,
     });
   }
-  print(returnArray);
   return returnArray;
 }
 
@@ -271,7 +322,19 @@ function generateBidDateInfo(supply, install, wpObj) {
 
 useThisFunctionToMake1FakeProject();
 
-// print("cwp1Day", cwp1Day);
-// print("cwp2Day", cwp2Day);
-// print("cwp1InstallDays", cwp1InstallDays);
-// print("random", uuidv4());
+// //Upgrades to consider:
+// - blackout dates
+// - workdays
+// - spotted Available Dates instead of 1 solid Range
+// - finished WPs
+
+// //Note that the following are modified:
+// - availDates are all modified
+
+// //Data has built-in limited considerations for:
+// - over-run days
+// - has supply and install already
+// - bids that don't honor anticipatedDates (DONT EXIST?)
+// - supplies that tries to finish early (DONT EXIST?)
+// - installs that try to start late (DONT EXIST?)
+// - WPs without sufficient bids
