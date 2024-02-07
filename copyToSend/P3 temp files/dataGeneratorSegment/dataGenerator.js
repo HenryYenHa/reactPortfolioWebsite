@@ -1,9 +1,21 @@
+// imports
+import {
+  updateDocument,
+  readDocument,
+  newDocument,
+  postDocument,
+} from "./databaseConnectionFiles/cleanCRUD.js";
 import fs from "fs";
 const miniDebug = true;
+const autoUploadToDatabase = true;
 //Manipulate these variables
-const projectID = `P01`;
-const numOfWP = 6;
-const numOfBidsPerWP = 15;
+const projectID = `P-${makeid(4)}`;
+const numOfBidsPerWP = 10;
+const numOfWP = 4;
+//Number of WPs in each CWP, will generate CWP1 WPs first until depleted before moving to next
+const numberOfCWP1WPs = 2;
+const numberOfCWP2WPs = 2;
+const numberOfCWP3WPs = 0;
 
 //Extra Options
 const supplyPriceMin = 15000;
@@ -12,20 +24,16 @@ const installPriceMin = 15000;
 const installPriceMax = 250000;
 const daysForDeliveryMin = 2;
 const daysForDeliveryMax = 8;
-const daysForManufacturingMin = 2;
-const daysForManufacturingMax = 10;
+const daysForFabricationMin = 2;
+const daysForFabricationMax = 10; //FIXXXXX
 const daysForInstallMin = 3;
 const daysForInstallMax = 15;
 const doubleBidChance = 0.1;
 const availDatesLeewayMin = 3;
 const availDatesLeewayMax = 7;
 //Estimate accuracy in %; class 5 accuracy is -20 to +50 ==> 80 to 150
-const estimateAccuracyMin = 0.8;
-const estimateAccuracyMax = 1.5;
-//Number of WPs in each CWP, will generate CWP1 WPs first until depleted before moving to next
-const numberOfCWP1WPs = 3;
-const numberOfCWP2WPs = 2;
-const numberOfCWP3WPs = 1;
+// const estimateAccuracyMin = 0.8;
+// const estimateAccuracyMax = 1.5;
 
 //List of generated Constants for ease of project generation
 const cwp1InstallDays = randomInteger(15, 30);
@@ -36,14 +44,29 @@ const cwp3Day = shiftDateByXDays(cwp2Day, cwp2InstallDays);
 
 //Generate ID of list of WP
 const generatedWPList = generateListOfWP(projectID, numOfWP);
-let bidReferrenceArray = [];
-let wpReferrenceArray = [];
-let bidIDRefferenceArray = [];
+//Reference Data
+let bidReferenceArray = [];
+let bidIDReferenceArray = [];
+let generatedWPObjects = [];
 let refID = 0;
+let fakeProject = {};
 
 //Mini Debug
 function print() {
   if (miniDebug) console.log(...arguments);
+}
+
+//Generates a random alphanumeric string
+function makeid(length) {
+  let result = "";
+  const characters = "ABCDEFGHJKLMNPQRSTUVWXYabcdefghijkmnpqrstuvwxy0123456789";
+  const charactersLength = characters.length;
+  let counter = 0;
+  while (counter < length) {
+    result += characters.charAt(Math.floor(Math.random() * charactersLength));
+    counter += 1;
+  }
+  return result;
 }
 
 //Utility function to generate UUIDv4
@@ -69,8 +92,9 @@ function shiftDateByXDays(givenDate, numberOfDays) {
 //The primary function
 function useThisFunctionToMake1FakeProject() {
   //Note: Projects data have nothing corresponding to the real deal in the database, it is only a list of the options used to generate the fake data
-  const fakeProject = {
+  fakeProject = {
     id: projectID,
+    timeCreated: String(new Date()),
     listofWP: generatedWPList,
     zz01numOfWP: numOfWP,
     zz02numOfBidsPerWP: numOfBidsPerWP,
@@ -80,15 +104,13 @@ function useThisFunctionToMake1FakeProject() {
     zz06installPriceMax: installPriceMax,
     zz07AdaysForDeliveryMin: daysForDeliveryMin,
     zz07BdaysForDeliveryMax: daysForDeliveryMax,
-    zz08AdaysForManufacturingMin: daysForManufacturingMin,
-    zz08BdaysForManufacturingMax: daysForManufacturingMax,
+    zz08AdaysForFabricationMin: daysForFabricationMin,
+    zz08BdaysForFabricationMax: daysForFabricationMax,
     zz09daysForInstallMin: daysForInstallMin,
     zz10daysForInstallMax: daysForInstallMax,
     zz11doubleBidChance: doubleBidChance,
     zz12availDatesLeewayMin: availDatesLeewayMin,
     zz13availDatesLeewayMax: availDatesLeewayMax,
-    zz14estimateAccuracyMin: estimateAccuracyMin,
-    zz15estimateAccuracyMax: estimateAccuracyMax,
     zz16numberOfCWP1WPs: numberOfCWP1WPs,
     zz17numberOfCWP2WPs: numberOfCWP2WPs,
     zz18numberOfCWP3WPs: numberOfCWP3WPs,
@@ -99,48 +121,47 @@ function useThisFunctionToMake1FakeProject() {
     zz23cwp3Day: cwp3Day,
   };
   //Create list of WP objects
-  const generatedWPObjects = generateWPObjects(
+  generatedWPObjects = generateWPObjects(
     projectID,
     generatedWPList,
     numOfBidsPerWP
   );
   //Manipulate bidReferenceArray to hold Bids
   for (let wpObj of generatedWPObjects) {
-    bidReferrenceArray.push(generateAssociatedBids(wpObj));
-    bidIDRefferenceArray.push(wpObj.submittedBids);
+    bidReferenceArray.push(generateAssociatedBids(wpObj));
+    bidIDReferenceArray.push(wpObj.submittedBids);
   }
 
-  const outputData = JSON.stringify(bidReferrenceArray, null, 2);
+  const outputData = JSON.stringify(bidReferenceArray, null, 2);
   const filename = "bidOutputs.json";
-  fs.writeFile(filename, outputData, "utf8", (err) => {
+  fs.writeFile(`./generatedData/${filename}`, outputData, "utf8", (err) => {
     if (err) {
       console.error("Error writing JSON to file:", err);
     } else {
-      console.log(`Bid data has been written to ${filename}`);
+      console.log(`Local Files: Bid data has been written to ${filename}`);
     }
   });
 
-  print(`BidIDList: ${JSON.stringify(bidIDRefferenceArray)}`);
-  // print(`Project: ${JSON.stringify(fakeProject)}`);
-
-  const outputData2 = JSON.stringify(bidReferrenceArray, null, 2);
+  const outputData2 = JSON.stringify(bidReferenceArray, null, 2);
   const filename2 = "workpackageOutput.json";
-  fs.writeFile(filename2, outputData2, "utf8", (err) => {
+  fs.writeFile(`./generatedData/${filename2}`, outputData2, "utf8", (err) => {
     if (err) {
       console.error("Error writing JSON to file:", err);
     } else {
-      console.log(`Workpackage data has been written to ${filename2}`);
+      console.log(
+        `Local Files: Workpackage data has been written to ${filename2}`
+      );
     }
   });
 
   let outputData3 = JSON.stringify(fakeProject, null, 2);
-  outputData3 = ",".concat(outputData3);
+  // outputData3 = ",".concat(outputData3);
   const filename3 = "loggedFakeProjects.json";
-  fs.appendFile(filename3, outputData3, "utf8", (err) => {
+  fs.writeFile(`./generatedData/${filename3}`, outputData3, "utf8", (err) => {
     if (err) {
       console.error("Error writing JSON to file:", err);
     } else {
-      console.log(`Project data has been written to ${filename3}`);
+      console.log(`Local Files: Project data has been written to ${filename3}`);
     }
   });
 }
@@ -158,7 +179,6 @@ function generateListOfWP(pID, numberOfWPs) {
 
 //Subfunction to Generate WP of Objects
 function generateWPObjects(pID, genWPList, numberOfBids) {
-  print("genWPLIST", genWPList);
   //Local reference to check how many WPs for each CWPs to make
   let wpCountPerCWP = [numberOfCWP1WPs, numberOfCWP2WPs, numberOfCWP3WPs];
 
@@ -201,9 +221,9 @@ function generateWPObjects(pID, genWPList, numberOfBids) {
     returnArray.push({
       id: `${wpID}`,
       projectID: pID,
-      cwp99: cwpID,
-      anticipatedDateForDelivery99: cwpAntiDate,
-      anticipatedDateToCommenceInstall99: cwpAntiDate2,
+      cwpDEBUGONLY: cwpID,
+      anticipatedDateForDeliveryDEBUGONLY: cwpAntiDate,
+      anticipatedDateToCommenceInstallDEBUGONLY: cwpAntiDate2,
       submittedBids: generatedListOfBids,
     });
   }
@@ -229,7 +249,7 @@ function generateAssociatedBids(wpObj) {
   let hasInstall = false;
 
   for (let bidID of wpObj.submittedBids) {
-    refID++; //99
+    refID++; //DEBUG ONLY
     let supplyVal = false;
     let installVal = false;
     // If they only have 1 submittedBid generate a double bid otherwise make sure it has at least 1 bid of each type
@@ -267,23 +287,21 @@ function generateAssociatedBids(wpObj) {
     returnArray.push({
       id: bidID,
       workPackage: wpObj.id,
-      installPrice: randomInteger(installPriceMin, installPriceMax),
-      supplyPrice: randomInteger(supplyPriceMin, supplyPriceMax),
       isEstimate: Math.random() < 0.5 ? true : false,
-      estimateAccuracy:
-        randomInteger(estimateAccuracyMin, estimateAccuracyMax) / 100 + 1,
+      estimateAccuracy: randomInteger(1, 5),
       submittedBy: uuidv4(),
       isSupply: supplyVal,
       isInstall: installVal,
-      supplyPrice99: checklist.supPrice,
-      installPrice99: checklist.instPrice,
+      supplyPriceSIMPLIFIED: checklist.supPrice,
+      installPriceSIMPLIFIED: checklist.instPrice,
       daysForFabrication: checklist.fabDay,
       daysForDelivery: checklist.delDay,
       daysForInstall: checklist.instDay,
-      availableDates9: [checklist.availDateMin, checklist.availDateMax],
-      availStart99: checklist.availDateMin,
-      availEnd99: checklist.availDateMax,
-      sumID99: refID,
+      availableDatesDEBUGONLY: [checklist.availDateMin, checklist.availDateMax],
+      availStartDEBUGONLY: checklist.availDateMin,
+      availEndDEBUGONLY: checklist.availDateMax,
+      sumIDDEBUGONLY: refID,
+      projectIDDEBUGONLY: projectID,
     });
   }
   return returnArray;
@@ -292,38 +310,42 @@ function generateAssociatedBids(wpObj) {
 //Subsubfunction to generate bid date info to be plugged into bids; returns object with information
 function generateBidDateInfo(supply, install, wpObj) {
   let returnObj = {};
+  const delDays = randomInteger(daysForDeliveryMin, daysForDeliveryMax);
+  returnObj.delDay = supply ? delDays : Infinity;
+  const fabDays = randomInteger(daysForFabricationMin, daysForFabricationMax);
+  returnObj.fabDay = supply ? fabDays : Infinity;
+  returnObj.supPrice = supply
+    ? randomInteger(supplyPriceMin, supplyPriceMax)
+    : Infinity;
+  const supDays = supply ? delDays + fabDays : Infinity;
+  returnObj.supDay = supDays;
+  const instDays = install
+    ? randomInteger(daysForInstallMin, daysForInstallMax)
+    : Infinity;
+  returnObj.instPrice = install
+    ? randomInteger(installPriceMin, installPriceMax)
+    : Infinity;
+  returnObj.instDay = instDays;
   if (supply) {
-    returnObj.supPrice = randomInteger(supplyPriceMin, supplyPriceMax);
-    const fabDay = randomInteger(
-      daysForManufacturingMin,
-      daysForManufacturingMax
-    );
-    returnObj.fabDay = fabDay;
-    const delDay = randomInteger(daysForDeliveryMin, daysForDeliveryMax);
-    returnObj.delDay = delDay;
-    const supDays = fabDay + delDay;
     returnObj.availDateMin = shiftDateByXDays(
-      wpObj.anticipatedDateForDelivery99,
+      wpObj.anticipatedDateForDeliveryDEBUGONLY,
       -(supDays + randomInteger(availDatesLeewayMin, availDatesLeewayMax))
     );
     returnObj.availDateMax = shiftDateByXDays(
-      wpObj.anticipatedDateForDelivery99,
+      wpObj.anticipatedDateForDeliveryDEBUGONLY,
       randomInteger(availDatesLeewayMin, availDatesLeewayMax)
     );
   }
   if (install) {
-    const instDays = randomInteger(daysForInstallMin, daysForInstallMax);
-    returnObj.instPrice = randomInteger(installPriceMin, installPriceMax);
-    returnObj.instDay = instDays;
     //If it is a double bid, fix the end date
     returnObj.availDateMax = shiftDateByXDays(
-      wpObj.anticipatedDateToCommenceInstall99,
+      wpObj.anticipatedDateToCommenceInstallDEBUGONLY,
       randomInteger(availDatesLeewayMin, availDatesLeewayMax) + instDays
     );
     // If it is not a double bid, fix the start date
     if (!supply) {
       returnObj.availDateMin = shiftDateByXDays(
-        wpObj.anticipatedDateToCommenceInstall99,
+        wpObj.anticipatedDateToCommenceInstallDEBUGONLY,
         -randomInteger(availDatesLeewayMin, availDatesLeewayMax)
       );
     }
@@ -331,13 +353,32 @@ function generateBidDateInfo(supply, install, wpObj) {
   return returnObj;
 }
 
+//Generate the data
 useThisFunctionToMake1FakeProject();
+print(`Project ${projectID} generated.`);
+
+//Post To Database(?)
+if (autoUploadToDatabase) {
+  //Post the Project
+  postDocument("generatedProjects", fakeProject);
+  //Post the WPs
+  for (let wp of generatedWPObjects) {
+    postDocument("generatedWorkPackages", wp);
+  }
+  //Post the bids
+  for (let bidArray of bidReferenceArray) {
+    for (let bid of bidArray) {
+      postDocument("generatedBids", bid);
+    }
+  }
+}
 
 // //Upgrades to consider:
 // - blackout dates
 // - workdays
 // - spotted Available Dates instead of 1 solid Range
 // - finished WPs
+// - Workpackage Statuses
 
 // //Note that the following are modified:
 // - availDates are all modified
